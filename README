@@ -1,0 +1,21 @@
+
+These are my user configurations files.
+You'd usually find them in this kind of configuration:
+
+~/
+~/.bashrc -> .system/.bashrc
+~/.inputrc -> .system/.inputrc
+~/.system/.bashrc
+~/.system/.inputrc
+~/.system/.git/
+~/.ssh -> ~/.system/.ssh/
+~/.system/.ssh -> /media/truecrypt.ssh/
+
+This enables quick backup or transfer between machines, as well as managing through git.
+
+the ssh symlinks along with the 'tmssh' alias enables me to keep my ssh directory safe,
+and to mount it with a quick command and key typing.
+My .gitignore ignores the .ssh.tc file, refered by the 'tmssh' alias.
+
+A small dose of paranoia never killed anyone, you know ;]
+
