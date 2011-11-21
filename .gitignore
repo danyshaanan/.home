@@ -1,0 +1,4 @@
+.ssh
+.ssh.tc
+*.swp
+.bash_aliases_private
