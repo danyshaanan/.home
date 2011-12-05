@@ -2,10 +2,10 @@
 ##apt-get:
 sudo apt-get install aptitude
 ##aptitude:
-sudo aptitude install vim tree build-essential xubuntu-restricted-extras curl git screen
-sudo aptitude install sensors hddtemp ffmpeg imagemagick streamer jp2a
-sudo aptitude install gparted vlc meld chromium-browser screen
-sudo aptitude install apache2 php5 sshfs fdupes trash-cli links rtorrent
+sudo aptitude	install vim tree build-essential xubuntu-restricted-extras curl git screen \
+		sensors hddtemp ffmpeg imagemagick streamer jp2a \
+		install gparted vlc meld chromium-browser screen \
+		install apache2 php5 sshfs fdupes trash-cli links rtorrent
 
 ##########################################################
 
