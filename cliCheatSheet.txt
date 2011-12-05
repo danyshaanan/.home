@@ -1,0 +1,61 @@
+
+##apt-get:
+sudo apt-get install aptitude
+##aptitude:
+sudo aptitude install vim tree build-essential xubuntu-restricted-extras curl git screen
+sudo aptitude install sensors hddtemp ffmpeg imagemagick streamer jp2a
+sudo aptitude install gparted vlc meld chromium-browser screen
+sudo aptitude install apache2 php5 sshfs fdupes trash-cli links rtorrent
+
+##########################################################
+
+##streamer:
+#Tame a few camera shots over a second from /dev/video0:
+streamer -c /dev/video0 -t 9 -r 9 -o ~/.webcam/webcam_`date +"\%Y\%m\%d_\%H\%M\%S"`-00.jpeg
+
+##sensors:
+echo `d` `t` `sensors|grep -oe '+\([0-9]*.[0-9]\).C '`
+##hddtemp:
+sudo hddtemp /dev/sd?
+##fdupes:
+fdupes -rS . >> fdupes.txt && grep -e "[0-9]\{7,\} byte" -A 3 fdupes.txt
+
+##imagemagick:
+#Take a screenshot:
+import -display :0.0 -window root ~/imagemagic_screen_`date +"%Y%m%d_%H%M%S"`.png
+#change filetype / rename to sequance: (good for ffmpeg)
+convert *.png eggscan-%03d.jpg
+#average image:
+convert -average *png average.png
+#clean sketches:
+mogrify -resize 10% -level 0%,80%,1 -rotate 180 -negate -alpha Copy -negate wawawawa.png
+
+##ffmpeg:
+#create a vid from a sequence of files:
+ffmpeg -r 24 -b 3600 -i %04d.jpg test3600.mp4
+#ready an mp3 for ios:
+ffmpeg -i file.mp3 file.m4a && mv file.m4a file.m4r
+
+##apache2:
+#restart apache:
+sudo /etc/init.d/apache2 restart
+service apache2 restart
+
+##vlc:
+#stream in the input of /dev/video0:
+vlc v4l2:///dev/video0
+
+##rename:
+rename 's/-([0-9])\./-0$1\./' *.png && ll
+
+##bash:
+#chain:
+(sleep 3 && ls  &) ; (sleep 2 && ll &)
+#forkbomb:
+:(){:|:&};:
+
+
+
+
+
+
