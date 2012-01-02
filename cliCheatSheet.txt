@@ -9,8 +9,14 @@ sudo aptitude install	vim tree build-essential xubuntu-restricted-extras curl gi
 
 ##########################################################
 
+##rsync:
+#two lines to backup and create a hard-link-based snapshot:
+time rsync -Phavy --delete-after src/ dest/ --dry-run
+time rsync -Phavy --delete-after src/ dest-`date +"%y%m%d_%H%M%S"`/ --link-dest=../dest --dry-run
+
+
 ##streamer:
-#Tame a few camera shots over a second from /dev/video0:
+#Take a few camera shots over a second from /dev/video0:
 streamer -c /dev/video0 -t 9 -r 9 -o ~/.webcam/webcam_`date +"\%Y\%m\%d_\%H\%M\%S"`-00.jpeg
 
 ##sensors:
