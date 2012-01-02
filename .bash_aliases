@@ -21,7 +21,7 @@ alias y=''
 alias tm='sudo truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
 alias tu='sudo truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
-alias tmssh='tm ~/.system/.ssh.tc /media/truecrypt.ssh' #truecrypt mount .ssh.tc into what is symlinked from ~/.ssh/
+alias tmssh='tm ~/.system/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias updg='sudo apt-get update && sudo apt-get upgrade'
