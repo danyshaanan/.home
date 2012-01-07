@@ -6,7 +6,8 @@ sudo aptitude install	vim tree build-essential xubuntu-restricted-extras curl gi
 			sensors hddtemp ffmpeg imagemagick streamer jp2a \
 			gparted vlc meld chromium-browser screen \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent
-
+##for xubuntu:
+sudo aptitude install pavucontrol #sound control
 ##########################################################
 
 ##rsync:
