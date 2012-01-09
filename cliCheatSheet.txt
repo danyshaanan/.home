@@ -14,7 +14,7 @@ sudo aptitude install pavucontrol #sound control
 #two lines to backup and create a hard-link-based snapshot:
 time rsync -Phavy --delete-after src/ dest/ --dry-run
 time rsync -Phavy --delete-after src/ dest-`date +"%y%m%d_%H%M%S"`/ --link-dest=../dest --dry-run
-
+#this can be done more elegantly by replacing the `date` command with the `d` and `t` aliases from .bash_aliases
 
 ##streamer:
 #Take a few camera shots over a second from /dev/video0:

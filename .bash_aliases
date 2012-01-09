@@ -36,3 +36,8 @@ alias tmssh='tm ~/.system/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 insert () { mkdir $1; mv $1* $1; }
 
 
+#Remember! cron does not run as your user, hence does not uses your aliases!!
+
+
+
+
