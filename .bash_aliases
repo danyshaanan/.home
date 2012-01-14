@@ -26,7 +26,7 @@ alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #b
 alias tm='sudo truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
 alias tu='sudo truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
-alias tmssh='tm ~/.system/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
+alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 
 ##functions:
 #bc calculator:
