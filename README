@@ -1,13 +1,9 @@
 
 These are my user configurations files.
 
-You'd usually find them in this kind of configuration:
+I keep the hidden project directory (.home) in my home directory, move existing dot files, and symlink its content with:
 
-~/.home/.git/
-~/.home/.bashrc
-~/.home/.inputrc
-~/.bashrc -> .home/.bashrc
-~/.inputrc -> .home/.inputrc
+$ cd && for f in $(ls -A .home/); do ln -s .home/$f ; done && rm -f ~/.git
 
-This way I can easily manage these config files with git between several machines.
+This way I can easily manage these dot files with git between several machines.
 
