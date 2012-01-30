@@ -1,9 +1,11 @@
 
 These are my user configurations files.
 
-I keep the hidden project directory (.home) in my home directory, move existing dot files, and symlink its content with:
+To set them up:
 
-$ cd && for f in $(ls -A .home/); do ln -s .home/$f ; done && rm -f ~/.git
+Place the hidden project directory (.home) in your home directory
+Move or rename existing dot files in your home directory
+With the following command, symlink the dot files in .home with:
+$ cd && for f in $(ls -A .home/); do ln -s .home/$f ; done && rm -f .git
 
-This way I can easily manage these dot files with git between several machines.
 
