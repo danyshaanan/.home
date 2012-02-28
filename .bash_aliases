@@ -33,7 +33,7 @@ alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 = () { echo "scale=4; ${*}" | bc ; }
 #create a dir and move all files with that dir as a prefix into it:
 #(this will always cause an error, for trying to move the dir into itself)
-insert () { mkdir $1; mv $1* $1; }
+insert () { mkdir $1; mv $1* $1; rmdir $1; }
 
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
