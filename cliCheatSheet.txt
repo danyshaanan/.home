@@ -5,7 +5,7 @@ sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git
 			sensors hddtemp imagemagick streamer jp2a \
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
-			ffmpeg sox mencoder mplayer libavcodec-extra-52
+			ffmpeg sox mencoder mplayer libavcodec-extra-52 unrar
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
@@ -71,6 +71,10 @@ service apache2 restart
 ##vlc:
 #stream in the input of /dev/video0:
 vlc v4l2:///dev/video0
+
+##unrar:
+#open password protected rar:
+unrar e -pPASSWORD archive.rar
 
 ##rename:
 rename 's/-([0-9])\./-0$1\./' *.png && ll
