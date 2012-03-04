@@ -5,7 +5,8 @@ sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git
 			sensors hddtemp imagemagick streamer jp2a \
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
-			ffmpeg sox mencoder mplayer libavcodec-extra-52 unrar
+			ffmpeg sox mencoder mplayer libavcodec-extra-52 unrar \
+			ddrescue foremost testdisk
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
@@ -78,6 +79,11 @@ unrar e -pPASSWORD archive.rar
 
 ##rename:
 rename 's/-([0-9])\./-0$1\./' *.png && ll
+
+##ddrescue foremost testdisk: (restore deleted files)
+ddrescue /dev/hdc hdimage logfile #or: dd if=/dev/hdc of=hdimage conv=noerror
+foremost hdimage
+photorec hdimage
 
 ##bash:
 #chain:
