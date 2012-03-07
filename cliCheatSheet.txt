@@ -5,7 +5,7 @@ sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
 			ffmpeg sox mencoder mplayer libavcodec-extra-52 unrar \
-			ddrescue testdisk
+			ddrescue testdisk scalpel
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
@@ -79,9 +79,16 @@ unrar e -pPASSWORD archive.rar
 ##rename:
 rename 's/-([0-9])\./-0$1\./' *.png && ll
 
-##ddrescue testdisk: (restore deleted files)
-dd_rescue /dev/hdc hdimage #or: dd if=/dev/hdc of=hdimage conv=noerror
-photorec hdimage
+#restore deleted files:
+##ddrescue: 
+sudo dd_rescue /dev/hdc hdimage #or: dd if=/dev/hdc of=hdimage conv=noerror
+##testdisk:
+sudo photorec hdimage
+##scalpel
+sudo vi /etc/scalpel/scalpel.conf #set file types
+mkdir output
+sudo scalpel file -vo output
+
 
 ##bash:
 #chain:
