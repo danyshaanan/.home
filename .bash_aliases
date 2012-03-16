@@ -14,7 +14,7 @@ alias l='clear && ll'
 alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ..='cd .. && ll'
-alias llt='tree -hFvC --noreport --dirsfirst -L 2'
+alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
 #new:
 alias y=''
 alias d='date +"%Y%m%d"'
