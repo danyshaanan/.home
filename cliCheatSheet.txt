@@ -1,11 +1,12 @@
 ##apt-get:
 #essentials
 sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git screen \
-			sensors hddtemp imagemagick streamer jp2a \
+			lm-sensors hddtemp imagemagick streamer jp2a \
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
-			ffmpeg sox mencoder mplayer libavcodec-extra-52 unrar \
-			ddrescue testdisk scalpel
+			ffmpeg sox mencoder mplayer unrar \
+			ddrescue testdisk scalpel \
+			libavcodec-extra-<TAB>
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
