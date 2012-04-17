@@ -5,8 +5,10 @@ sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
 			ffmpeg sox mencoder mplayer unrar \
-			ddrescue testdisk scalpel \
+			ddrescue testdisk scalpel youtube-dl \
 			libavcodec-extra-<TAB>
+
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
