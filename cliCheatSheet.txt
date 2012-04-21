@@ -4,7 +4,7 @@ sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git
 			lm-sensors hddtemp imagemagick streamer jp2a \
 			gparted vlc meld chromium-browser screen aptitude \
 			apache2 php5 sshfs fdupes trash-cli links rtorrent \
-			ffmpeg sox mencoder mplayer unrar \
+			ffmpeg sox mencoder mplayer unrar exif \
 			ddrescue testdisk scalpel youtube-dl \
 			libavcodec-extra-<TAB>
 
@@ -12,6 +12,8 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 #sound control for xubuntu
 sudo apt-get install	pavucontrol
+#left hand dvorak in xubuntu
+sudo apt-get install	xfce4-xkb-plugin
 
 ##rsync:
 #two lines to backup and create a hard-link-based snapshot:
