@@ -1,19 +1,12 @@
 ##apt-get:
-#essentials
-sudo apt-get install	vim tree build-essential xubuntu-restricted-extras curl git screen \
-			lm-sensors hddtemp imagemagick streamer jp2a \
-			gparted vlc meld chromium-browser screen aptitude \
-			apache2 php5 sshfs fdupes trash-cli links rtorrent \
-			ffmpeg sox mencoder mplayer unrar exif \
-			ddrescue testdisk scalpel youtube-dl \
-			libavcodec-extra-<TAB>
+sudo apt-get install vim git curl							#cli essentials
+sudo apt-get install chromium-browser build-essential ubuntu-restricted-extras		#gui essentials
+sudo apt-get install tree lm-sensors hddtemp aptitude unrar screen fdupes trash-cli	#cli system
+sudo apt-get install imagemagick jp2a streamer ffmpeg sox mencoder mplayer vlc gimp	#cli graphics
+sudo apt-get install gparted meld							#gui developement 
+sudo apt-get install ddrescue testdisk scalpel youtube-dl				#cli recover and TY 
 
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
-
-#sound control for xubuntu
-sudo apt-get install	pavucontrol
-#left hand dvorak in xubuntu
-sudo apt-get install	xfce4-xkb-plugin
 
 ##rsync:
 #two lines to backup and create a hard-link-based snapshot:
