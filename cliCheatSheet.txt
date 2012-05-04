@@ -6,7 +6,7 @@ sudo apt-get install imagemagick jp2a renrot exif					#cli graphics
 sudo apt-get install streamer ffmpeg sox mencoder mplayer vlc youtube-dl		#cli audio video
 sudo apt-get install ddrescue testdisk scalpel						#cli recovery
 sudo apt-get install gparted meld gimp gparted						#gui
-sudo apt-get install mysql-client mysql-server
+sudo apt-get install mysql-server
 sudo apt-get install gnome-session-fallback
 
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
