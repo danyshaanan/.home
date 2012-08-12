@@ -8,6 +8,7 @@ alias rm='rm -iv'
 alias mv='mv -i'
 alias cd='cd -P'
 alias mkdir='mkdir -p'
+alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
 #varients:
 alias ll='ls -lh -F --color --group-directories-first'
 alias l='clear && ll'
@@ -29,6 +30,9 @@ alias tm='sudo truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
 alias tu='sudo truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
 alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
+#if a truecrypt volume creation fails, try to create one without a filesystem, and then:
+#truecrypt --filesystem=none /path/to/file.tc
+#mkfs.ext3 /dev/mapper/truecryptx
 
 ##functions:
 #bc calculator:
@@ -37,6 +41,7 @@ alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 #(this will always cause an error, for trying to move the dir into itself)
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
 
+everysec () { while true; do clear && ${*} && sleep 1 ; done }
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
 
