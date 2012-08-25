@@ -4,6 +4,7 @@
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then #TODO: test this line when I'll have access to a linux box.
   #linus:
+  alias run='xdg-open' #this should be cross-distribution
   alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
   alias ll='ls -lh -F --color --group-directories-first'
   alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
@@ -35,7 +36,6 @@ alias vimencrypt='vim -u ~/.vimencrypt -x'
 alias y=''
 alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
-alias run='xdg-open' #this should be cross-distribution
 alias updg='sudo apt-get update && sudo apt-get upgrade'
 alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
