@@ -1,16 +1,30 @@
 ##aliases
+
+#Load platform specific files:
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then #TODO: test this line when I'll have access to a linux box.
+  #linus:
+  alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
+  alias ll='ls -lh -F --color --group-directories-first'
+  alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  #osx:
+  export PATH=/usr/local/bin:/usr/local/mysql/bin:$PATH
+  alias run='open'
+  alias df='df -h | grep --invert-match -e "none.*tmpfs"'
+  alias ll='ls -lh -F'
+fi
+
+
 #existing: (to run the original, use: `which ORIGINAL`)
 alias grep='grep --color'
-alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
 alias du='du -shc'
 alias cp='cp -i'
 alias rm='rm -iv'
 alias mv='mv -i'
 alias cd='cd -P'
 alias mkdir='mkdir -p'
-alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
 #varients:
-alias ll='ls -lh -F --color --group-directories-first'
 alias l='clear && ll'
 alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden
@@ -45,6 +59,14 @@ everysec () { while true; do clear && ${*} && sleep 1 ; done }
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
 
+#######################
 
+alias exifdaterename='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
+
+#######################
+
+if [ -f ~/.bash_aliases_private ]; then
+    . ~/.bash_aliases_private
+fi
 
 
