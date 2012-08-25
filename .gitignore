@@ -1,3 +1,4 @@
 *.swp
 .ssh*.tc
+.my.cnf
 .bash_aliases_private
