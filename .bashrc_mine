@@ -2,18 +2,22 @@
 
 #Load platform specific files:
 unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then #TODO: test this line when I'll have access to a linux box.
-  #linus:
-  alias run='xdg-open' #this should be cross-distribution
-  alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
-  alias ll='ls -lh -F --color --group-directories-first'
-  alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
-elif [[ "$unamestr" == 'Darwin' ]]; then
-  #osx:
-  export PATH=/usr/local/bin:/usr/local/mysql/bin:$PATH
-  alias run='open'
-  alias df='df -h | grep --invert-match -e "none.*tmpfs"'
-  alias ll='ls -lh -F'
+if [[ "$unamestr" == 'Linux' ]]; then #Linux: #TODO: test this line when I'll have access to a linux box.
+
+alias run='xdg-open' #this should be cross-distribution
+alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
+alias ll='ls -lh -F --color --group-directories-first'
+alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
+alias updg='sudo apt-get update && sudo apt-get upgrade'
+alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #by imagemagick.
+
+elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
+
+export PATH=/usr/local/bin:/usr/local/mysql/bin:$PATH
+alias run='open'
+alias df='df -h | grep --invert-match -e "none.*tmpfs"'
+alias ll='ls -lh -F'
+
 fi
 
 
@@ -36,10 +40,8 @@ alias vimencrypt='vim -u ~/.vimencrypt -x'
 alias y=''
 alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
-alias updg='sudo apt-get update && sudo apt-get upgrade'
 alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
-alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #by imagemagick.
 alias tm='sudo truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
 alias tu='sudo truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
