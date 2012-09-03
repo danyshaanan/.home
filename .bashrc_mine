@@ -13,7 +13,7 @@ alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #b
 
 elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
 
-export PATH=/usr/local/bin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:$PATH
 alias run='open'
 alias df='df -h | grep --invert-match -e "none.*tmpfs"'
 alias ll='ls -lh -F'
