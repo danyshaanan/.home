@@ -16,6 +16,10 @@ sudo apt-get update && sudo apt-get upgrade
 time rsync -Phavy --delete-after src/ dest/ --dry-run
 time rsync -Phavy --delete-after src/ dest-`date +"%y%m%d_%H%M%S"`/ --link-dest=../dest --dry-run
 #this can be done more elegantly by replacing the `date` command with the `d` and `t` aliases from .bash_aliases
+#create a hard-link copy of a full directory with rsync:
+rsync -Phavy dir1/ dir2/ --link-dest=../dir1/
+#same with pax:
+pax -rwl dir1 /tmp/ && mv /tmp/dir1 dir2 #as long as . and /tmp are on the same fs!
 
 ##streamer:
 #Take a few camera shots over a second from /dev/video0:
