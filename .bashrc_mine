@@ -13,10 +13,14 @@ alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #b
 
 elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
 
-export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:$PATH
+export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:$PATH
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/ 
+export PS1='\t:\u@\h:\w$ ' #check if to make linux as well
 alias run='open'
 alias df='df -h | grep --invert-match -e "none.*tmpfs"'
 alias ll='ls -lh -F'
+alias screenshot='imageSnap'
+alias green='screenshot /dev/null > /dev/null'
 
 fi
 
@@ -56,6 +60,7 @@ alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 #create a dir and move all files with that dir as a prefix into it:
 #(this will always cause an error, for trying to move the dir into itself)
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
+insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
 
 everysec () { while true; do clear && ${*} && sleep 1 ; done }
 
