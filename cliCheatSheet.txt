@@ -11,6 +11,16 @@ sudo apt-get install gparted meld gimp gitk vlc
 #update:
 sudo apt-get update && sudo apt-get upgrade
 
+##Downloads for osx:
+#cli:
+brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
+brew install ddrescue duff fdupes rename scalpel testdisk tree 
+brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl
+#gui:
+brew install meld
+
+###########################################################
+
 ##rsync:
 #two lines to backup and create a hard-link-based snapshot:
 time rsync -Phavy --delete-after src/ dest/ --dry-run
