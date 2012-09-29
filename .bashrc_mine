@@ -21,6 +21,7 @@ alias df='df -h | grep --invert-match -e "none.*tmpfs"'
 alias ll='ls -lh -F'
 alias screenshot='imageSnap'
 alias green='screenshot /dev/null > /dev/null'
+alias mtr='sudo mtr'
 
 fi
 
