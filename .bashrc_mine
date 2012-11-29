@@ -1,3 +1,6 @@
+
+unset MAILCHECK
+
 ##aliases
 
 #Load platform specific files:
