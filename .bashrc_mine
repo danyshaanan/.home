@@ -18,7 +18,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
 
 export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:$PATH
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/ 
-export PS1='\t:\u@\h:\w$ ' #check if to make linux as well
+export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #check if to make linux as well
 alias run='open'
 alias df='df -h | grep --invert-match -e "none.*tmpfs"'
 alias ll='ls -lh -F'
@@ -27,6 +27,13 @@ alias green='screenshot /dev/null > /dev/null'
 alias mtr='sudo mtr'
 
 fi
+
+# Git branch in prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+#export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
 
 
 #existing: (to run the original, use: `which ORIGINAL`)
