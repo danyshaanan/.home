@@ -21,7 +21,7 @@ alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #b
 
 elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
 
-export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:$PATH
+export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/ 
 export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #check if to make linux as well
 alias run='open'
@@ -30,7 +30,7 @@ alias ll='ls -lh -F'
 alias screenshot='imageSnap'
 alias green='screenshot /dev/null > /dev/null'
 alias mtr='sudo mtr'
-
+alias today='grep `date +"%m/%d"` /usr/share/calendar/calendar.*'
 fi
 
 
