@@ -15,7 +15,7 @@ sudo apt-get update && sudo apt-get upgrade
 #cli:
 brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
 brew install ddrescue duff fdupes rename scalpel testdisk tree 
-brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl
+brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
 #gui:
 brew install meld
 
