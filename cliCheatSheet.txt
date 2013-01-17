@@ -16,8 +16,6 @@ sudo apt-get update && sudo apt-get upgrade
 brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
 brew install ddrescue duff fdupes rename scalpel testdisk tree 
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
-#gui:
-brew install meld
 
 ###########################################################
 
@@ -25,7 +23,6 @@ brew install meld
 #two lines to backup and create a hard-link-based snapshot:
 time rsync -Phavy --delete-after src/ dest/ --dry-run
 time rsync -Phavy --delete-after src/ dest-`date +"%y%m%d_%H%M%S"`/ --link-dest=../dest --dry-run
-#this can be done more elegantly by replacing the `date` command with the `d` and `t` aliases from .bash_aliases
 #create a hard-link copy of a full directory with rsync:
 rsync -Phavy dir1/ dir2/ --link-dest=../dir1/
 #same with pax:
@@ -76,11 +73,6 @@ ffmpeg -i output.wav -sameq output.mp3
 ##sox:
 #reverse a wav:
 sox -V audio.wav reveresed.wav reverse
-
-##apache2:
-#restart apache:
-sudo /etc/init.d/apache2 restart
-service apache2 restart
 
 ##vlc:
 #stream in the input of /dev/video0:
