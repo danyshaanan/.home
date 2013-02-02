@@ -76,6 +76,13 @@ alias tmt='tm ~/.$USER/30hfs.tc ~/.$USER/local'
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
 insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
 
+files () {
+	for i in $*
+	do 
+		echo "`tree $i | wc -l` : $i"
+	done
+}
+
 everysec () { while true; do clear && ${*} && sleep 1 ; done }
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
