@@ -114,6 +114,9 @@ sudo !!
 #forkbomb:
 :(){:|:&};:
 
+##Cron:
+#user cronjob as an alarm clock:
+30 8 * * -1-5 mpg123 /Users/$USER/Hurt.mp3
 
 
 
