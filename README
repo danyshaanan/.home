@@ -1,14 +1,10 @@
 
 These are my user configurations files.
 
-To set them up:
+A few points:
 
-Place the hidden project directory (.home) in your home directory
-Move or rename existing dot files in your home directory
-With the following command, symlink the dot files in .home with:
+* In order to manage them easily, keep them in ~/.home , remove all relavent dot files under ~ , and run this: cd && for f in $(ls -A .home/); do ln -s .home/$f ; done
 
-cd && for f in $(ls -A .home/); do ln -s .home/$f ; done && rm -f .git
+* If you're into Truecrypt, the tmssh command will mount ~/.home/.ssh.tc into ~/.ssh/ , and will let you keep your keys safe.
 
-Also, create a .my.cnf file for mysql in .ssh. link it from .home/
-and link the .home/ link from ~/
-
+* If you do that, consider also having .my.cnf be a symlink to ~/.ssh/.my.cnf (inside the tc volume of course).
