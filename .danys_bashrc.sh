@@ -96,8 +96,4 @@ alias exifdaterename='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
 
 #######################
 
-if [ -f ~/.bashrc_mine_private ]; then
-    . ~/.bashrc_mine_private
-fi
-
 
