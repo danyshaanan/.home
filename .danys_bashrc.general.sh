@@ -11,28 +11,13 @@ parse_git_branch() {
 #Load platform specific files:
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then #Linux: #TODO: test this line when I'll have access to a linux box.
-
-alias run='xdg-open' #this should be cross-distribution
-alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
-alias ll='ls -lh -F --color --group-directories-first'
-alias renrot='renrot -n "%Y%m%d%H%M%S-%C"'
-alias updg='sudo apt-get update && sudo apt-get upgrade'
-alias screenshot='import -display :0.0 -window root ~/screenshot_`d`_`t`.png' #by imagemagick.
-
+  if [ -f ~/.danys_bashrc.linux.sh ]; then
+    . ~/.danys_bashrc.linux.sh
+  fi
 elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
-
-export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/ 
-export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #TODO: check if to make linux as well #TODO: this is exported to root on su, while the funciton isn't
-alias run='open'
-alias df='df -h | grep "/dev/"'
-alias ll='ls -lh -F'
-alias screenshot='imageSnap'
-alias green='screenshot /dev/null > /dev/null'
-alias mtr='sudo mtr'
-alias today='grep `date +"%m/%d"` /usr/share/calendar/calendar.*'
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-alias pyserver='python -m SimpleHTTPServer'
+  if [ -f ~/.danys_bashrc.osx.sh ]; then
+    . ~/.danys_bashrc.osx.sh
+  fi
 fi
 
 #existing: (to run the original, use: `which ORIGINAL`)
