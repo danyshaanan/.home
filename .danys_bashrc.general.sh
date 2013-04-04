@@ -20,6 +20,11 @@ elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
   fi
 fi
 
+if [ -f ~/.danys_bashrc.work.sh ]; then
+  . ~/.danys_bashrc.work.sh
+fi
+
+
 #existing: (to run the original, use: `which ORIGINAL`)
 alias grep='grep --color'
 alias du='du -shc'
