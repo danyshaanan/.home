@@ -34,6 +34,7 @@ alias mv='mv -i'
 alias cd='cd -P'
 alias mkdir='mkdir -p'
 #varients:
+alias ll='ls -alF'
 alias l='clear && ll'
 alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden
