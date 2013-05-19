@@ -88,8 +88,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # personal config:
 
-if [ -f ~/.danys_bashrc.general.sh ]; then
-    . ~/.danys_bashrc.general.sh
+if [ -f ~/.bashrc.general.sh ]; then
+    . ~/.bashrc.general.sh
 fi
 
 # enable programmable completion features (you don't need to enable

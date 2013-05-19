@@ -11,17 +11,17 @@ parse_git_branch() {
 #Load platform specific files:
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then #Linux: #TODO: test this line when I'll have access to a linux box.
-  if [ -f ~/.danys_bashrc.linux.sh ]; then
-    . ~/.danys_bashrc.linux.sh
+  if [ -f ~/.bashrc.linux.sh ]; then
+    . ~/.bashrc.linux.sh
   fi
 elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
-  if [ -f ~/.danys_bashrc.osx.sh ]; then
-    . ~/.danys_bashrc.osx.sh
+  if [ -f ~/.bashrc.osx.sh ]; then
+    . ~/.bashrc.osx.sh
   fi
 fi
 
-if [ -f ~/.danys_bashrc.work.sh ]; then
-  . ~/.danys_bashrc.work.sh
+if [ -f ~/.bashrc.work.sh ]; then
+  . ~/.bashrc.work.sh
 fi
 
 
