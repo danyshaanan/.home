@@ -47,8 +47,8 @@ alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
-alias tm='sudo truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
-alias tu='sudo truecrypt -t -d' #truecrypt unmount file or dir
+alias tm='truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
+alias tu='truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
 alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 #if a truecrypt volume creation fails, try to create one without a filesystem, and then:
