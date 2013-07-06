@@ -39,22 +39,22 @@ zmodload -ap zsh/mapfile mapfile 2>/dev/null
 PATH="/usr/local/bin:/usr/local/sbin/:/bin:/sbin:/usr/bin:/usr/sbin:$PATH"
 TZ="America/New_York"
 HISTFILE=$HOME/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=4000
+SAVEHIST=4000
 HOSTNAME="`hostname`"
 PAGER='less'
 EDITOR='vim'
-    autoload colors zsh/terminfo
-    if [[ "$terminfo[colors]" -ge 8 ]]; then
-   colors
-    fi
-    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-   eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-   eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-   (( count = $count + 1 ))
-    done
-    PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
+autoload colors zsh/terminfo
+if [[ "$terminfo[colors]" -ge 8 ]]; then
+  colors
+fi
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+  eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+  eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+  (( count = $count + 1 ))
+done
+PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="$PR_YELLOW%n$PR_GREEN:$PR_RED%d $PR_NO_COLOR> "
 RPS1="$PR_BLUE%D:%*$PR_NO_COLOR"
 
@@ -75,42 +75,6 @@ unsetopt ALL_EXPORT
 # # aliases
 # # --------------------------------------------------------------------
 
-alias slrn="slrn -n"
-alias man='LC_ALL=C LANG=C man'
-alias f=finger
-alias cd='cd -P'
-alias l='clear && ll'
-alias la='ll -a'
-alias ll='ls -lh'
-#alias ls='ls --color=auto --group-directories-first '
-alias offlineimap-tty='offlineimap -u TTY.TTYUI'
-alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
-alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
-#if [[ $HOSTNAME == "kamna" ]] {
-#	alias emacs='emacs -l ~/.emacs.kamna'
-#}	
-
-# alias	=clear
-
-#chpwd() {
-#     [[ -t 1 ]] || return
-#     case $TERM in
-#     sun-cmd) print -Pn "\e]l%~\e\\"
-#     ;;
-#    *xterm*|screen|rxvt|(dt|k|E)term) print -Pn "\e]2;%~\a"
-#    ;;
-#    esac
-#}
-selfupdate(){
-        URL="http://stuff.mit.edu/~jdong/misc/zshrc"
-        echo "Updating zshrc from $URL..."
-        echo "Press Ctrl+C within 5 seconds to abort..."
-        sleep 5
-        cp ~/.zshrc ~/.zshrc.old
-        wget $URL -O ~/.zshrc
-        echo "Done; existing .zshrc saved as .zshrc.old"
-}
-#chpwd
 
 autoload -U compinit
 compinit
