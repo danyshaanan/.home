@@ -1,6 +1,6 @@
 
-if [ -f ~/.bashrc.sh ]; then
-  . ~/.bashrc.sh
+if [ -f ~/.bashrc.general.sh ]; then
+    . ~/.bashrc.general.sh
 fi
 
 
