@@ -52,6 +52,7 @@ alias tu='truecrypt -t -d' #truecrypt unmount file or dir
 alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
 alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 alias py='time python'
+alias gst='clear && git status'
 #if a truecrypt volume creation fails, try to create one without a filesystem, and then:
 #truecrypt --filesystem=none /path/to/file.tc
 #mkfs.ext3 /dev/mapper/truecryptx
