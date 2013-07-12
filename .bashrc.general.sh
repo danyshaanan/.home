@@ -68,7 +68,7 @@ insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
 #count the number of files/directories in a dir:
 files () {
 	for i in $*
-	do 
+	do
 		echo "`tree $i | wc -l` : $i"
 	done
 }
@@ -78,7 +78,7 @@ sl() {
 	ls -l ${*} | grep -ve '^l'
 }
 
-everysec () { while true; do clear && ${*} && sleep 1 ; done }
+everysec () { while true; do sleep 1 && ${*} ; done }
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
 
