@@ -2,3 +2,4 @@
 *.tc
 .my.cnf
 .bashrc.work.sh
+.gitconfig
