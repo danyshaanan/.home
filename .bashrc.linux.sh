@@ -1,4 +1,8 @@
 
+if [[ `uname` != 'Linux' ]]; then
+	return
+fi
+
 alias run='xdg-open' #this should be cross-distribution
 alias df='df -hT | grep --invert-match -e "none.*tmpfs"'
 alias ll='ls -lh -F --color --group-directories-first'

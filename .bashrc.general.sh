@@ -8,23 +8,6 @@ parse_git_branch() {
 
 ##aliases
 
-#Load platform specific files:
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then #Linux: #TODO: test this line when I'll have access to a linux box.
-  if [ -f ~/.bashrc.linux.sh ]; then
-    . ~/.bashrc.linux.sh
-  fi
-elif [[ "$unamestr" == 'Darwin' ]]; then #osx:
-  if [ -f ~/.bashrc.osx.sh ]; then
-    . ~/.bashrc.osx.sh
-  fi
-fi
-
-if [ -f ~/.bashrc.work.sh ]; then
-  . ~/.bashrc.work.sh
-fi
-
-
 #existing: (to run the original, use: `which ORIGINAL`)
 alias grep='grep --color'
 alias du='du -shc'

@@ -1,4 +1,8 @@
 
+if [[ `uname` != 'Darwin' ]]; then
+	return
+fi
+
 export NODE_PATH="/usr/local/bin/node"
 export PATH=~/bin/:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:/usr/local/share/npm/bin:$PATH
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/ 
