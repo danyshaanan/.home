@@ -24,7 +24,7 @@ alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ..='cd .. && ll'
 alias llnsl='ll | grep -v "@ \->"'
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
-alias vimencrypt='vim -u ~/.vimencrypt -x'
+alias vimencrypt='vim -u ~/.home/.vimencrypt -x'
 #new:
 alias y=''
 alias d='date +"%Y%m%d"'

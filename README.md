@@ -7,7 +7,6 @@ These are my user configurations files
  * .bashrc
  * .inputrc
  * .screenrc
- * .vimencrypt
  * .vimrc
 
 This way, all configuration files are easily version-controlled and synced between multiple machines.
