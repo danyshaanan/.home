@@ -3,6 +3,13 @@ These are my user configurations files
 
 * I store this repository in my home folder, meaning in $HOME/.home/
 * I symlink the following files from $HOME:
+
+```bash
+ln -s ~/.home/profile .profile
+ln -s ~/.home/profile .profile
+ln -s ~/.home/profile .profile
+```
+
  * .bash_profile
  * .bashrc
  * .inputrc
