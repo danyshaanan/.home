@@ -1,19 +1,14 @@
 These are my user configurations files
 --------------------------------------
 
-* I store this repository in my home folder, meaning in $HOME/.home/
-* I symlink the following files from $HOME:
-
 ```bash
-ln -s ~/.home/profile .profile
-ln -s ~/.home/profile .profile
-ln -s ~/.home/profile .profile
+cd ~/
+
+git clone git@github.com:danyshaanan/.home.git
+
+ln -s ~/.home/.bash_profile ~/.bash_profile
+ln -s ~/.home/.bashrc ~/.bashrc
+ln -s ~/.home/.inputrc ~/.inputrc
+ln -s ~/.home/.screenrc ~/.screenrc
+ln -s ~/.home/.vimrc ~/.vimrc
 ```
-
- * .bash_profile
- * .bashrc
- * .inputrc
- * .screenrc
- * .vimrc
-
-This way, all configuration files are easily version-controlled and synced between multiple machines.
