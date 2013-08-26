@@ -16,6 +16,8 @@ alias rm='rm -iv'
 alias mv='mv -i'
 alias cd='cd -P'
 alias mkdir='mkdir -p'
+alias top='top -o cpu'
+alias ls='ls -lsG'
 #varients:
 alias ll='ls -alF'
 alias l='clear && ll'
@@ -25,6 +27,15 @@ alias ..='cd .. && ll'
 alias llnsl='ll | grep -v "@ \->"'
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
 alias vimencrypt='vim -u ~/.home/.vimencrypt -x'
+alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+#ls:
+alias lk="ls -lSrG"         # sort by size, biggest last
+alias lc="ls -ltcrG"        # sort by and show change time, most recent last
+alias lu="ls -lturG"        # sort by and show access time, most recent last
+alias lt="ls -ltrG"         # sort by date, most recent last
+alias lm="ls -alG |more"    # pipe through 'more'
+alias lr="ls -lR"           # recursive ls
 #new:
 alias y=''
 alias d='date +"%Y%m%d"'
@@ -55,6 +66,11 @@ files () {
 	do
 		echo "`tree $i | wc -l` : $i"
 	done
+}
+
+# search
+g(){
+  ack $@ --color-match=green --color-filename=blue --smart-case
 }
 
 #ls without symlinks:

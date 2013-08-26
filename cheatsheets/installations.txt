@@ -16,6 +16,6 @@ sudo apt-get update && sudo apt-get upgrade
 brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
 brew install ddrescue duff fdupes rename scalpel testdisk tree 
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
-brew install node vimeo-downloader ruby
+brew install node vimeo-downloader ruby ack
 
 sudo gem install sass
