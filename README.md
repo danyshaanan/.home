@@ -12,3 +12,5 @@ ln -s ~/.home/.inputrc ~/.inputrc
 ln -s ~/.home/.screenrc ~/.screenrc
 ln -s ~/.home/.vimrc ~/.vimrc
 ```
+
+(Make sure to remove the originals first).
