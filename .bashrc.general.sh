@@ -42,9 +42,10 @@ alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
-alias tm='truecrypt -t -k "" --protect-hidden=no' #truecrypt mount file
-alias tu='truecrypt -t -d' #truecrypt unmount file or dir
-alias tua='truecrypt -t -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
+alias truecrypt='truecrypt -t' #always use terminal mode
+alias tm='truecrypt -k "" --protect-hidden=no' #truecrypt mount file
+alias tu='truecrypt -d' #truecrypt unmount file or dir
+alias tua='truecrypt -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
 alias tmssh='tm ~/.home/.ssh.tc ~/.ssh' #truecrypt mount .ssh.tc into ~/.ssh
 alias py='time python'
 alias gst='clear && git status'
