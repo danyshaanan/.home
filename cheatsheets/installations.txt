@@ -18,7 +18,7 @@ brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
 brew install ddrescue duff fdupes rename scalpel testdisk tree 
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
 brew install node vimeo-downloader ruby ack
-brew install cdparanoia lame abcde
+brew install cdparanoia lame abcde # && cd /usr/local/bin && ln eyeD3_script eyeD3 #for enabling abcde -o mp3
 
 ##Nodejs:
 npm install -g nsyrc
