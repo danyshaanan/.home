@@ -23,3 +23,6 @@ brew install cdparanoia lame abcde # see https://gist.github.com/danyshaanan/649
 npm install -g nsyrc
 npm install -g cli-mandelbrot
 npm install -g geoexif
+
+##Python:
+sudo easy_install eyeD3
