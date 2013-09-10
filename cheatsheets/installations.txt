@@ -13,12 +13,11 @@ sudo apt-get update && sudo apt-get upgrade
 
 ##Installations for osx:
 #cli:
-brew install aircrack-ng mdbtools mtr pil ssh-copy-id sshfs unrar wget
-brew install ddrescue duff fdupes rename scalpel testdisk tree 
-brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
-brew install node vimeo-downloader ruby ack
+brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl
+brew install ddrescue duff fdupes rename scalpel testdisk tree
+brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123 vimeo-downloader
+brew install node brainfuck ruby ack python pil
 brew install cdparanoia lame abcde # see https://gist.github.com/danyshaanan/6494096 for abcde
-brew install brainfuck
 
 ##Nodejs:
 npm install -g nsyrc
