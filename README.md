@@ -4,7 +4,7 @@ These are my user configurations files
 ```bash
 cd ~/
 
-git clone git@github.com:danyshaanan/.home.git
+git clone https://github.com/danyshaanan/.home.git
 
 ln -s ~/.home/.bash_profile ~/.bash_profile
 ln -s ~/.home/.bashrc ~/.bashrc
