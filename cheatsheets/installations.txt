@@ -16,7 +16,7 @@ sudo apt-get update && sudo apt-get upgrade
 brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl
 brew install ddrescue duff fdupes rename scalpel testdisk tree
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123 vimeo-downloader
-brew install node brainfuck ruby ack haskell-platform python pil
+brew install node brainfuck ruby ack haskell-platform python
 brew install cdparanoia lame abcde # see https://gist.github.com/danyshaanan/6494096 for abcde
 
 ##Nodejs:
@@ -26,7 +26,8 @@ npm install -g geoexif
 npm install -g tcmount
 
 ##Python:
-sudo easy_install eyeD3
+pip install eyeD3 eyeD3-pip
+pip install PIL
 
 ##Web downloads:
 run http://www.truecrypt.org/downloads
