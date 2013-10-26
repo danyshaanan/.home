@@ -27,3 +27,6 @@ npm install -g tcmount
 
 ##Python:
 sudo easy_install eyeD3
+
+##Web downloads:
+run http://www.truecrypt.org/downloads
