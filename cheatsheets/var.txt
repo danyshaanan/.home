@@ -9,7 +9,8 @@ echo `d` `t` `sensors|grep -oe '+\([0-9]*.[0-9]\).C '`
 ##hddtemp:
 sudo hddtemp /dev/sd?
 ##fdupes:
-fdupes -rS . >> fdupes.txt && grep -e "[0-9]\{7,\} byte" -A 3 fdupes.txt
+fdupes -rnS . | tee fdupes.txt
+fdupes -rnS . >> fdupes.txt && grep -e "[0-9]\{7,\} byte" -A 3 fdupes.txt
 
 ##sox:
 #reverse a wav:
