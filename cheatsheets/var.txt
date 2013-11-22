@@ -35,6 +35,9 @@ xrandr -x # / -y
 #user cronjob as an alarm clock:
 30 8 * * 1-5 TODO
 
-
+##find and convert bmp files: (should be a one liner)
+find . -name '*bmp'
+#cd whatever
+mogrify -format png *bmp && rm -f *bmp
 
 
