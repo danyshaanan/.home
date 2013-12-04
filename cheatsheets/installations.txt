@@ -13,7 +13,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ##Installations for osx:
 #cli:
-brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip
+brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
 brew install ddrescue duff fdupes rename scalpel testdisk tree fcrackzip
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123 vimeo-downloader
 brew install node brainfuck ruby ack haskell-platform python
