@@ -30,4 +30,5 @@ pip install eyeD3 eyeD3-pip
 pip install PIL
 
 ##Web downloads:
-run http://www.truecrypt.org/downloads
+http://www.truecrypt.org/downloads
+http://blyt.net/phxslides/
