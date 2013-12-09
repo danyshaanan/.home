@@ -32,3 +32,26 @@ pip install PIL
 ##Web downloads:
 http://www.truecrypt.org/downloads
 http://blyt.net/phxslides/
+
+
+#----------- Cask -------------
+#(todo: move to main brew file)
+
+#brew cask:
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+#quick-view plugins:
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
+defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
+
+#more installations: (todo: test:)
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install imagealpha
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install sublime-text
+brew cask install vlc
+
+ln -s ~/Applications /Applications/userApps #If user apps do not show in apps menu.
