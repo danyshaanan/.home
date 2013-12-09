@@ -1,0 +1,4 @@
+
+##Python:
+pip install eyeD3 eyeD3-pip
+pip install PIL

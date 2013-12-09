@@ -1,0 +1,30 @@
+
+xcode-select --install
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+
+#brew installations:
+
+brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
+brew install ddrescue duff fdupes rename scalpel testdisk tree fcrackzip
+brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123 vimeo-downloader
+brew install node brainfuck ruby ack haskell-platform python
+brew install cdparanoia lame abcde # see https://gist.github.com/danyshaanan/6494096 for abcde
+
+
+#install brew cask:
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+
+#cask installations:
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
+defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
+
+#more installations: (todo: test, not tested)
+brew cask install iterm2
+brew cask install truecrypt keepassx multibit
+brew cask install google-chrome google-chrome-canary chromium
+brew cask install imagealpha imageoptim vlc phoenix-slides
+brew cask install sublime-text
+
+#TODO: search for more at https://github.com/phinze/homebrew-cask/tree/master/Casks
