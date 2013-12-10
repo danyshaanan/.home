@@ -12,7 +12,7 @@ ln -s ~/.home/.inputrc ~/.inputrc
 ln -s ~/.home/.screenrc ~/.screenrc
 ln -s ~/.home/.vimrc ~/.vimrc
 
-ln -s ~/.home/vimColors/peaksea.vim ~/.vim/colors/
+mkdir -p ~/.vim/colors/ && ln -s ~/.home/vimColors/peaksea.vim ~/.vim/colors/
 
 FILE=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 mv "$FILE" "$FILE.orig"
