@@ -4,3 +4,4 @@ npm install -g nsyrc
 npm install -g cli-mandelbrot
 npm install -g geoexif
 npm install -g tcmount
+npm install -g git-repos
