@@ -25,6 +25,6 @@ brew cask install iterm2
 brew cask install truecrypt keepassx multibit
 brew cask install google-chrome google-chrome-canary chromium
 brew cask install imagealpha imageoptim vlc phoenix-slides
-brew cask install sublime-text
+brew cask install sublime-text sizeup
 
 #TODO: search for more at https://github.com/phinze/homebrew-cask/tree/master/Casks
