@@ -13,3 +13,4 @@ set echo-control-characters off
 # Ignore case on tab completion
 set completion-ignore-case On
 
+set bell-style off
