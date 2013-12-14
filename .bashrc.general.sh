@@ -58,6 +58,7 @@ alias gst='clear && git status'
 #(this will always cause an error, for trying to move the dir into itself)
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
 insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
+insertall () { mkdir $1; mv *$1* $1; rmdir $1; }
 
 #count the number of files/directories in a dir:
 files () {
