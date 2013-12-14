@@ -1,7 +1,5 @@
 
 ##Nodejs:
-npm install -g nsyrc
-npm install -g cli-mandelbrot
-npm install -g geoexif
-npm install -g tcmount
-npm install -g git-repos
+npm i -g nsyrc tcmount git-repos
+npm i -g cli-mandelbrot geoexif
+npm i -g grunt grunt-cli
