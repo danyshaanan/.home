@@ -20,3 +20,17 @@ alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/Truecrypt -t' #always use terminal mode
 alias pyserver='python -m SimpleHTTPServer'
 alias unmount='diskutil umount'
+
+#ding
+#usage:
+#npm install ; ding
+function ding(){
+  if [[ $? != 0 ]] ; then
+    afplay /System/Library/Sounds/Basso.aiff
+  else
+    afplay /System/Library/Sounds/Glass.aiff
+  fi
+}
+
+
+
