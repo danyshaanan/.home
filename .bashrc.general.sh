@@ -17,7 +17,8 @@ alias mv='mv -i'
 alias cd='cd -P'
 alias mkdir='mkdir -p'
 alias top='top -o cpu'
-alias ls='ls -lsG'
+alias ls1='/bin/ls -1'
+alias ls='ls -lsG' #Dont alias ls. Why does moving these flags to ll and removing this like breaks ll?
 #varients:
 alias ll='ls -alF'
 alias l='clear && ll'
