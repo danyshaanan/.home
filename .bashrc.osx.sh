@@ -16,7 +16,6 @@ alias screenshot='imageSnap'
 alias green='screenshot /dev/null > /dev/null'
 alias mtr='sudo mtr'
 alias today='grep `date +"%m/%d"` /usr/share/calendar/calendar.*'
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/Truecrypt -t' #always use terminal mode
 alias pyserver='python -m SimpleHTTPServer'
 alias unmount='diskutil umount'
