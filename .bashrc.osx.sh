@@ -10,7 +10,7 @@ export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #TODO: check if to make linux as w
 export LSCOLORS='gxfxcxdxbxegedabagaced'
 
 alias run='open'
-alias df='df -h | grep "/dev/"'
+alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
 alias ll='ls -lh -F'
 alias screenshot='imageSnap'
 alias green='screenshot /dev/null > /dev/null'
