@@ -42,6 +42,7 @@ alias y=''
 alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
+alias nounderlines='rename s/_/\./g'
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
 alias tm='tcmount'
 alias tu='tcmount -u'
