@@ -1,10 +1,9 @@
-
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
 #brew installations:
 
-brew install aircrack-ng mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
+brew install mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
 brew install ddrescue duff fdupes rename testdisk tree fcrackzip
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
 brew install node ruby ack haskell-platform python
