@@ -19,6 +19,7 @@ alias today='grep `date +"%m/%d"` /usr/share/calendar/calendar.*'
 alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/Truecrypt -t' #always use terminal mode
 alias pyserver='python -m SimpleHTTPServer'
 alias unmount='diskutil umount'
+alias wifi='osx-wifi-cli'
 
 #ding
 #usage:

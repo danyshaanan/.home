@@ -1,8 +1,11 @@
 
 ##Nodejs:
 npm i -g nsyrc tcmount git-repos dupes
-npm i -g cli-mandelbrot geoexif imagesnapjs
-
+npm i -g cli-mandelbrot geoexif
 npm i -g forever
 npm i -g grunt grunt-cli
-npm i -g fuck-you
+
+### osx only:
+npm i -g imagesnapjs osx-wifi-cli fuck-you
+
+
