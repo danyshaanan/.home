@@ -5,3 +5,4 @@ npm i -g cli-mandelbrot geoexif imagesnapjs
 
 npm i -g forever
 npm i -g grunt grunt-cli
+npm i -g fuck-you
