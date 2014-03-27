@@ -27,7 +27,7 @@ alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ..='cd .. && ll'
 alias llnsl='ll | grep -v "@ \->"'
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
-alias vimencrypt='vim -u ~/.home/.vimencrypt -x'
+alias vimencrypt='vim -u ~/.home/vimencrypt -x'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 #ls:
@@ -90,5 +90,3 @@ alias exifrenamecreated='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
 alias exifrenamemodified='exiftool "-FileName<FileModifyDate" -d "%Y%m%d_%H%M%S.%%e"'
 
 #######################
-
-
