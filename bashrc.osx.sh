@@ -21,6 +21,10 @@ alias pyserver='python -m SimpleHTTPServer'
 alias unmount='diskutil umount'
 alias wifi='osx-wifi-cli'
 
+osxsleep() {
+	sleep `echo "scale=4; 60 * ${1:-0}" | bc` && pmset sleepnow
+}
+
 #ding
 #usage:
 #npm install ; ding
@@ -31,6 +35,3 @@ function ding(){
     afplay /System/Library/Sounds/Glass.aiff
   fi
 }
-
-
-
