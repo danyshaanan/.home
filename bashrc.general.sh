@@ -80,7 +80,7 @@ sl() {
 	ls -l ${*} | grep -ve '^l'
 }
 
-everysec () { while true; do sleep 1 && ${*} ; done }
+alias everysec='watch -n 1'
 
 #Remember! cron does not run as your user, hence does not uses your aliases!!
 
