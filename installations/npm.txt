@@ -3,7 +3,7 @@
 npm i -g nsyrc tcmount git-repos dupes
 npm i -g cli-mandelbrot geoexif jsserver
 npm i -g forever
-npm i -g grunt grunt-cli
+npm i -g grunt grunt-cli karma-cli
 
 ### osx only:
 npm i -g imagesnapjs osx-wifi-cli fuck-you
