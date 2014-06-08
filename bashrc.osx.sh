@@ -9,6 +9,8 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
 export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #TODO: check if to make linux as well #TODO: this is exported to root on su, while the funciton isn't
 export LSCOLORS='gxfxcxdxbxegedabagaced'
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
 
 alias run='open'
 alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
