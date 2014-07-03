@@ -49,6 +49,8 @@ alias tu='tcmount -u'
 alias tua='truecrypt -l | grep -oe "[^ ]\+$" | tu' #truecrypt unmount all
 alias py='time python'
 alias gst='clear && git status'
+alias copydir='pwd | pbcopy'
+alias cdpaste='cd `pbpaste`'
 #if a truecrypt volume creation fails, try to create one without a filesystem, and then:
 #truecrypt --filesystem=none /path/to/file.tc
 #mkfs.ext3 /dev/mapper/truecryptx
