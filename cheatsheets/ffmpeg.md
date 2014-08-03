@@ -1,4 +1,5 @@
-##ffmpeg:
+## ffmpeg
+```bash
 #convert avi to mpg:
 ffmpeg -i video.avi -sameq video.mpg
 #concatenate two or move videos to one:
@@ -16,3 +17,4 @@ ffmpeg -i output.wav -sameq output.mp3
 ffmpeg -i input.mp4 -vf "transpose=1" output.mp4 #2 for ccw
 #flip vertically:
 ffmpeg -i input.mp4 -vf vflip output.mp4 # hflip for horizontally
+```

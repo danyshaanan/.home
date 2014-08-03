@@ -1,5 +1,6 @@
 
-##bash:
+## bash
+```bash
 #sudo last command:
 sudo !!
 #replace once in last commange:
@@ -12,3 +13,4 @@ sudo !!
 (sleep 3 && ls &) ; (sleep 2 && ll &)
 #forkbomb:
 :(){:|:&};:
+```

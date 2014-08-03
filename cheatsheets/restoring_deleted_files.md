@@ -1,18 +1,19 @@
-#
-# Restoring deleted or formatted files, mainly from FAT.* or NTFS file systems.
-#
 
+### Restoring deleted or formatted files, mainly from FAT.* or NTFS file systems.
 
+```
 sudo apt-get install ddrescue testdisk scalpel #Linux
 #or
 sudo brew install ddrescue testdisk #OSX
 
-#restore deleted files:
-##ddrescue: 
+# copy the drive to an image with ddrescue:
 sudo dd_rescue /dev/hdc hdimage
-##testdisk:
+
+#testdisk:
 sudo photorec hdimage
-##scalpel (only linux)
+
+#scalpel (only linux)
 sudo vi /etc/scalpel/scalpel.conf #set file types
 mkdir output
 sudo scalpel hdimage -vo output
+```
