@@ -23,6 +23,7 @@ alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/Truecrypt -t' #alway
 alias pyserver='python -m SimpleHTTPServer'
 alias unmount='diskutil umount'
 alias wifi='osx-wifi-cli'
+alias mylocalip='ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127."'
 
 osxsleep() {
 	sleep `echo "scale=4; 60 * ${1:-0}" | bc` && pmset sleepnow
