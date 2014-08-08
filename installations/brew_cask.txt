@@ -9,7 +9,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
 #more installations: (todo: test, not tested)
-brew cask install iterm2
+brew cask install iterm2 atom
 brew cask install truecrypt keepassx multibit
 brew cask install google-chrome chromium
 brew cask install imagealpha imageoptim vlc phoenix-slides
