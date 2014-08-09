@@ -1,22 +1,27 @@
+# MongoDB
+on OSX
 
-
+### Install mongo
+```bash
 brew install mongodb
 sudo mkdir -p /data/db
 sudo chown $USER /data/db
 mongod
 mongo
+```
 
-
-
+### Run mongod on restart
+```bash
 #To have launchd start mongodb at login:
-#    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 #Then to load mongodb now:
-#    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
 #Or, if you don't want/need launchctl, you can just run:
-#    mongod --config /usr/local/etc/mongod.conf
+mongod --config /usr/local/etc/mongod.conf
+```
 
-
-$ mongo
+### Example
+```mongo
 show dbs
 use DATABASENAME
 db
@@ -35,4 +40,4 @@ col.remove({})
 col.find()
 
 exit
-
+```

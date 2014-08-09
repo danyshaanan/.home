@@ -1,6 +1,0 @@
-brew install mysql
-mysql.server start
-mysql -uroot
-> CREATE DATABASE dbname;
-> exit
-mysql -uroot dbname < dbname.mysql
