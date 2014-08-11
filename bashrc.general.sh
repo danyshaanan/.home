@@ -6,6 +6,8 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 } #TODO: why when running 'sudo su root' the PS1 var stays but this function does not? fix
 
+gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
+
 ##aliases
 
 #existing: (to run the original, use: `which ORIGINAL`)
