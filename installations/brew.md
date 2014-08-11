@@ -8,6 +8,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
 ### Installations
 ```bash
+brew install osxfuse # and follow instructions in output
 brew install mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
 brew install ddrescue duff fdupes rename testdisk tree fcrackzip links
 brew install exif exiftool ffmpeg imagemagick jp2a mplayer sox youtube-dl mpg123
