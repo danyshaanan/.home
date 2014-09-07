@@ -3,6 +3,10 @@ if [[ `uname` != 'Darwin' ]]; then
 	return
 fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 export NODE_PATH="/usr/local/bin/node"
 export NODE_HOME='/usr/local/bin'
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:$PATH
