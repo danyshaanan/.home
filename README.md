@@ -2,20 +2,18 @@
 
 To install on a new machine:
 
+Install git via [Homebrew](http://brew.sh):
 ```bash
-# get Homebrew: (http://brew.sh)
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-# Install git:
 brew install git
-# Clone this repo:
-git clone https://github.com/danyshaanan/.home.git ~/.home
-# Symlink needed files to home:
-ln -s ~/.home/.bash_profile ~/.bash_profile
-ln -s ~/.home/.bashrc ~/.bashrc
-ln -s ~/.home/.inputrc ~/.inputrc
-ln -s ~/.home/.screenrc ~/.screenrc
-ln -s ~/.home/.vimrc ~/.vimrc
 ```
+clone this repo and deploy symbolic links:
+```bash
+curl -fsSl https://raw.github.com/danyshaanan/.home/go/install.sh | sh
+```
+or just run [the command lines one by one](https://github.com/danyshaanan/.home/blob/go/install.sh).
+
+
 
 Usually after that, I'd run something like this:
 
@@ -30,3 +28,4 @@ brew cask install iterm2 atom truecrypt keepassx chromium vlc sublime-text utorr
 npm i -g nsyrc tcmount dupes cli-mandelbrot imagesnapjs
 npm i -g forever grunt-cli node-inspector serve fuck-you
 ```
+(There are more recommended installations in the `installations` directory)
