@@ -38,12 +38,6 @@ set smarttab
 set shiftwidth=2
 set shiftround
 
-try
-  colorscheme peaksea
-catch /^Vim\%((\a\+)\)\=:E185/
-  " deal with it
-endtry
-
 "map <Up> k
 "map <Down> j
 "map <Left> h
@@ -52,7 +46,3 @@ endtry
 "map <End> $
 "map <PageUp> 30k
 "map <PageDown> 31j
-
-
-
-
