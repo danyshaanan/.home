@@ -94,3 +94,5 @@ alias exifrenamecreated='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
 alias exifrenamemodified='exiftool "-FileName<FileModifyDate" -d "%Y%m%d_%H%M%S.%%e"'
 
 #######################
+
+#cowsay "Happy `date '+%A'` $USER! Moooooooo!!" # Make sure that cowsay exists
