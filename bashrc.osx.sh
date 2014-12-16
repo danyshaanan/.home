@@ -7,7 +7,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-export NODE_PATH="/usr/local/bin/node"
+export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 export NODE_HOME='/usr/local/bin'
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:$PATH
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
