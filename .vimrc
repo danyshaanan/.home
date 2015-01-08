@@ -46,3 +46,5 @@ set shiftround
 "map <End> $
 "map <PageUp> 30k
 "map <PageDown> 31j
+
+autocmd Filetype gitcommit setlocal spell
