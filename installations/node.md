@@ -34,3 +34,18 @@ Set default version for new terminals:
 ```bash
 nvm alias default stable
 ```
+
+Notice that modules installed globally with NPM
+should be installed once per Node installation:
+```bash
+$ nvm use 0.10
+Now using node v0.10.35
+$ npm i -g cli-mandelbrot
+#... installation finished
+$ cli-mandelbrot
+#... module working
+$ nvm use 0.9
+Now using node v0.9.12
+$ cli-mandelbrot
+-bash: cli-mandelbrot: command not found
+```
