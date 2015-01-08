@@ -3,7 +3,7 @@
 ```bash
 #sudo last command:
 sudo !!
-#replace once in last commange:
+#replace once in last command:
 ^foo^bar
 #replace a few times in last command?
 !!:gs/foo/bar
