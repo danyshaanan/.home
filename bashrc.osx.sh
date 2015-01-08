@@ -16,6 +16,8 @@ export LSCOLORS='gxfxcxdxbxegedabagaced'
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
 alias run='open'
 alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
 alias ll='ls -lh -F'
