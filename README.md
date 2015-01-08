@@ -19,7 +19,7 @@ ln -s ~/.home/.vimrc ~/.vimrc
 touch ~/.hushlogin
 ```
 
-Check out brew and node installations in `installations/brew.md` and `installations/node.md`, or get the essentials with:
+Check out brew and node installations in the `installations` directory, or get the essentials with:
 
 ```bash
 brew tap phinze/homebrew-cask
