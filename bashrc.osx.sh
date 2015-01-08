@@ -1,7 +1,5 @@
 
-if [[ `uname` != 'Darwin' ]]; then
-	return
-fi
+[ `uname` == 'Darwin' ] || return
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
