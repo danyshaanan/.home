@@ -1,4 +1,4 @@
-## These are my user configurations files
+## These are my OSX user configurations files
 
 To install on a new machine:
 
@@ -9,23 +9,25 @@ brew install git
 ```
 clone this repo and deploy symbolic links:
 ```bash
-curl -fsSl https://raw.github.com/danyshaanan/.home/go/install.sh | sh
+git clone https://github.com/danyshaanan/.home.git ~/.home
+
+ln -s ~/.home/.bash_profile ~/.bash_profile
+ln -s ~/.home/.bashrc ~/.bashrc
+ln -s ~/.home/.inputrc ~/.inputrc
+ln -s ~/.home/.screenrc ~/.screenrc
+ln -s ~/.home/.vimrc ~/.vimrc
+touch ~/.hushlogin
 ```
-or just run [the command lines one by one](https://github.com/danyshaanan/.home/blob/go/install.sh).
 
-
-
-Usually after that, I'd run something like this:
+Check out brew and node installations in `installations/brew.md` and `installations/node.md`, or get the essentials with:
 
 ```bash
-brew install wget trash vim rename tree exiftool imagemagick youtube-dl node python watch figlet
-
 brew tap phinze/homebrew-cask
-brew install brew-cask
-
-brew cask install iterm2 atom truecrypt keepassx chromium vlc sublime-text utorrent sequel-pro
-
-npm i -g nsyrc tcmount dupes cli-mandelbrot imagesnapjs
-npm i -g forever grunt-cli node-inspector serve fuck-you
+brew install wget vim rename brew-cask
+brew cask install iterm2 atom sublime-text truecrypt keepassx chromium vlc sequel-pro
+git clone https://github.com/creationix/nvm.git ~/.nvm
+cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+bash
+nvm install stable && nvm alias default stable
+npm i -g nsyrc tcmount cli-mandelbrot pm2 grunt-cli fuck-you
 ```
-(There are more recommended installations in the `installations` directory)

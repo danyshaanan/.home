@@ -19,6 +19,10 @@ Set nvm to load from your rc files:
 ```
 (Already in this repo within `bashrc.osx.sh`)
 
+Reload bash with:
+```bash
+bash
+```
 
 Install Node versions:
 ```bash
@@ -48,4 +52,17 @@ $ nvm use 0.9
 Now using node v0.9.12
 $ cli-mandelbrot
 -bash: cli-mandelbrot: command not found
+```
+
+# NPM
+
+### Installations
+```bash
+npm i -g nsyrc tcmount git-repos dupes cli-mandelbrot geoexif jsserver
+npm i -g pm2 grunt grunt-cli karma-cli node-inspector jasmine-node serve
+```
+
+### OSX only
+```bash
+npm i -g imagesnapjs osx-wifi-cli fuck-you
 ```
