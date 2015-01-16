@@ -29,6 +29,7 @@ alias wifi='osx-wifi-cli'
 alias mylocalip='ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127."'
 alias eject='drutil eject' # remove when cds will finally die
 alias updatebrewcask='brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup'
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 osxsleep() {
 	sleep `echo "scale=4; 60 * ${1:-0}" | bc` && pmset sleepnow
