@@ -10,11 +10,6 @@ HISTFILESIZE=4000 # Number of lines in history file
 # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Git branch in prompt.
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-} #TODO: why when running 'sudo su root' the PS1 var stays but this function does not? fix
-
 gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
 
 ##aliases
