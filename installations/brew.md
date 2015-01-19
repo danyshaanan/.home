@@ -9,7 +9,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
 ```bash
 brew install git bash-completion git-extras
-brew install gpg pass
+brew install gpg pass ack
 brew install osxfuse # and follow instructions in output
 brew install mdbtools mtr ssh-copy-id sshfs unrar wget vim curl p7zip trash
 brew install ddrescue duff fdupes rename testdisk tree fcrackzip links

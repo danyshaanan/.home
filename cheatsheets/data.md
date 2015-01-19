@@ -75,6 +75,12 @@ truecrypt -t -k='' --protect-hidden=no 1g.tc dir
 truecrypt -t -d dir
 ```
 
+if a truecrypt volume creation fails, try to create one without a filesystem, and format it:
+```bash
+truecrypt --filesystem=none /path/to/file.tc
+mkfs.ext3 /dev/mapper/truecryptx
+```
+
 
 ## convert mdb to mysql with mdbtools
 
