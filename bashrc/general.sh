@@ -24,7 +24,7 @@ alias grep='grep --color'
 alias mkdir='mkdir -p'
 
 #varients:
-alias ll='ls -alF'
+alias ll='ls -lhF'
 alias l='clear && ll'
 alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden

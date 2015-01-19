@@ -16,7 +16,6 @@ export LESS=' -R '
 
 alias run='open'
 alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
-alias ll='ls -lh -F'
 alias screenshot='imageSnap'
 alias green='screenshot /dev/null > /dev/null'
 alias mtr='sudo mtr'
