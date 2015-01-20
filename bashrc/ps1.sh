@@ -55,7 +55,8 @@ USER='\u'
 COMP='\h'
 FLDR='\w'
 
-PS1=$txtwht$TIME$bldblk':'$USER'@'$COMP$bldblk':'$txtwht$FLDR$bldblk$BRANCH' $ '$txtrst
+# PS1=$txtwht$TIME$bldblk':'$USER'@'$COMP$bldblk':'$txtwht$FLDR$bldblk$BRANCH' $ '$txtrst
+PS1=$TIME':'$USER'@'$COMP':'$FLDR$BRANCH' $ '
 
 
 ################################################################################
