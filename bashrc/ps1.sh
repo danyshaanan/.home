@@ -49,14 +49,14 @@ branch() {
   [ -d .git ] && git name-rev --name-only @ | sed -e 's/^\(.*\)$/ (\1)/'
 }
 
-BRANCH='$(branch)'
-TIME='\t'
-USER='\u'
-COMP='\h'
-FLDR='\w'
+PS1BRANCH='$(branch)'
+PS1TIME='\t'
+PS1USER='\u'
+PS1COMP='\h'
+PS1FLDR='\w'
 
 # PS1=$txtwht$TIME$bldblk':'$USER'@'$COMP$bldblk':'$txtwht$FLDR$bldblk$BRANCH' $ '$txtrst
-PS1=$TIME':'$USER'@'$COMP':'$FLDR$BRANCH' $ '
+PS1=$PS1TIME':'$PS1USER'@'$PS1COMP':'$PS1FLDR$PS1BRANCH' $ '
 
 
 ################################################################################
