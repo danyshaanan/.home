@@ -81,6 +81,22 @@ truecrypt --filesystem=none /path/to/file.tc
 mkfs.ext3 /dev/mapper/truecryptx
 ```
 
+### Encrypt/decrypt stuff with your RSA key pair
+
+First, create a "pem" public key from your regular public key with:
+```bash
+openssl rsa -in ~/.ssh/id_rsa -pubout > ~/.ssh/id_rsa.pub.pem
+```
+
+Once you have that, encrypt with:
+```bash
+echo "secret123" | openssl rsautl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem > cypher.enc
+```
+...and decrypt with:
+```bash
+cat cypher.enc | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa
+```
+
 
 ## convert mdb to mysql with mdbtools
 
