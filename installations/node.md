@@ -59,7 +59,7 @@ $ cli-mandelbrot
 ### Installations
 ```bash
 npm i -g nsyrc tcmount git-repos dupes cli-mandelbrot geoexif jsserver
-npm i -g pm2 grunt-cli gulp karma-cli node-inspector jasmine-node serve tape normit
+npm i -g pm2 grunt-cli gulp karma-cli node-inspector jasmine-node serve tape normit torrent
 ```
 
 ### OSX only
