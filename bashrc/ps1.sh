@@ -46,7 +46,7 @@ txtrst='\e[0m'    # Text Reset
 ################################################################################
 
 branch() {
-  [ -d .git ] && git name-rev --name-only @ | sed -e 's/^\(.*\)$/ (\1)/'
+  [ -d .git ] && git rev-parse --abbrev-ref HEAD | sed -e 's/^\(.*\)$/ (\1)/'
 }
 
 PS1BRANCH='$(branch)'
