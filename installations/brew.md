@@ -32,7 +32,7 @@ brew cask install iterm2 atom
 brew cask install truecrypt keepassx multibit
 brew cask install google-chrome chromium firefox
 brew cask install imagealpha imageoptim vlc phoenix-slides
-brew cask install sublime-text brackets utorrent
+brew cask install sublime-text brackets transmission
 brew cask install sequel-pro sqlite-database-browser github
 brew cask install arduino # ftdi drivers also required
 ```
