@@ -42,7 +42,9 @@ alias lr="ls -lR"           # recursive ls
 #file management:
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
-alias nospaces='rename s/\ /_/g' #replaces spaces with underline in target files
+alias oldnospaces='rename s/\ /_/g' #replaces spaces with underline in target files
+alias nospaces='rename s/\ /./g' #replaces spaces with dots in target files
+alias underscorestodots='rename s/_/./g' #replaces underlines with dots in target files
 alias nounderlines='rename s/_/\./g'
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
 alias exifrenamecreated='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
