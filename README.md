@@ -22,8 +22,7 @@ touch ~/.hushlogin
 Check out brew and node installations in the `installations` directory, or get the essentials with:
 
 ```bash
-brew tap phinze/homebrew-cask
-brew install wget vim rename brew-cask
+brew install wget vim rename caskroom/cask/brew-cask
 brew cask install iterm2 atom sublime-text truecrypt keepassx chromium vlc sequel-pro
 git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`

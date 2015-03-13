@@ -22,8 +22,7 @@ brew install spark cowsay figlet wdiff
 # brew-cask
 
 ```bash
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 ```
 
 # brew-cask installations
