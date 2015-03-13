@@ -39,6 +39,9 @@ alias lt='ls -ltrG'         # sort by date, most recent last
 alias lm='ls -alG |more'    # pipe through 'more'
 alias lr='ls -lR'           # recursive ls
 
+alias abstree='tree `pwd` --prune --noreport --dirsfirst -fixaFC -supgD'
+alias absll='abstree -L 1'
+
 #file management:
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
