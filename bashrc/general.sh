@@ -52,6 +52,7 @@ alias nounderlines='rename s/_/\./g'
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
 alias exifrenamecreated='exiftool "-FileName<CreateDate" -d "%Y%m%d_%H%M%S.%%e"'
 alias exifrenamemodified='exiftool "-FileName<FileModifyDate" -d "%Y%m%d_%H%M%S.%%e"'
+lsj () { node -e 'console.log(JSON.stringify(require("fs").readdirSync("'$1'" || "."),0,2))'; }
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
 insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
 insertall () { mkdir $1; mv *$1* $1; rmdir $1; }
