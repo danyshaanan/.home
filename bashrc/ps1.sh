@@ -45,11 +45,11 @@ txtrst='\e[0m'    # Text Reset
 
 ################################################################################
 
-branch() {
-  [ -d .git ] && git rev-parse --abbrev-ref HEAD | sed -e 's/^\(.*\)$/ (\1)/'
-}
 
-PS1BRANCH='$(branch)'
+[ -s /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ] && source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh # OSX
+[ -s /etc/bash_completion.d/git ] && source /etc/bash_completion.d/git #Linux
+
+type __git_ps1 > /dev/null 2> /dev/null && PS1BRANCH='$(__git_ps1)' || PS1BRANCH=''
 PS1TIME='\t'
 PS1USER='\u'
 PS1COMP='\h'
