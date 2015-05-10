@@ -38,7 +38,9 @@ ffmpeg -r 24 -b 3600 -i %04d.jpg test3600.mp4
 #convert an mp3 for ios:
 ffmpeg -i file.mp3 file.m4a && mv file.m4a file.m4r
 #cut a part of a video:
-ffmpeg -ss 60 -t 5 -i source.mp4 -sameq source_60_to_65.mp4
+ffmpeg -ss 00:02:49 -t 00:00:18 -i input.mp4 -qscale 0 output.mp4
+#create webm out of mp4:
+ffmpeg -i input.mp4 -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis output.webm
 #convert wav to mp3:
 ffmpeg -i output.wav -sameq output.mp3
 
