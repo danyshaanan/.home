@@ -64,5 +64,5 @@ npm i -g pm2 grunt-cli gulp karma-cli node-inspector jasmine-node serve tape nor
 
 ### OSX only
 ```bash
-npm i -g imagesnapjs osx-wifi-cli fuck-you
+npm i -g imagesnapjs osx-wifi-cli fuck-you@1.1.2
 ```
