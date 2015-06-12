@@ -59,6 +59,7 @@ insertall () { mkdir $1; mv *$1* $1; rmdir $1; }
 files () { for i in $*; do echo "`tree $i | wc -l` : $i"; done;} #count files/dirs
 
 #bash utils:
+alias here='cd -P .'
 alias y=''
 alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
