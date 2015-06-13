@@ -2,7 +2,7 @@
 
 ```bash
 xcode-select --install
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 # Homebrew installations
@@ -31,9 +31,8 @@ brew install caskroom/cask/brew-cask
 brew cask install iterm2 atom
 brew cask install truecrypt keepassx multibit
 brew cask install google-chrome chromium firefox
-brew cask install imagealpha imageoptim vlc phoenix-slides
-brew cask install sublime-text brackets transmission
-brew cask install sequel-pro sqlite-database-browser github
+brew cask install vlc sublime-text transmission
+brew cask install sequel-pro sqlite-database-browser
 brew cask install nmap
 brew cask install arduino # ftdi drivers also required
 ```
