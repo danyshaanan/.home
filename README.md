@@ -3,7 +3,7 @@
 To install on a new machine:
 
 ```bash
-git clone git@github.com:danyshaanan/.home.git ~/.home
+git clone https://github.com/danyshaanan/.home.git ~/.home
 bash ~/.home/init.sh
 ```
 
