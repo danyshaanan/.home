@@ -1,8 +1,10 @@
 
 [ `uname` == 'Darwin' ] || return
 
-BASHCOMP="`brew --prefix`/etc/bash_completion"
-[ -f "$BASHCOMP" ] && . "$BASHCOMP"
+if which brew >/dev/null; then
+	BASHCOMP="`brew --prefix`/etc/bash_completion"
+	[ -f "$BASHCOMP" ] && . "$BASHCOMP"
+fi
 
 export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 export NODE_HOME='/usr/local/bin'
