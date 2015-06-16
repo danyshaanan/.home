@@ -11,7 +11,7 @@ To setup git, brew, brew-cask, node, and useful installations:
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install git vim rename tree ruby caskroom/cask/brew-cask
-brew cask install iterm2 atom truecrypt keepassx google-chrome chromium vlc sequel-pro arduino
+brew cask install iterm2 atom keepassx google-chrome chromium vlc sequel-pro arduino
 
 git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm && git checkout `git describe --abbrev=0 --tags` && bash

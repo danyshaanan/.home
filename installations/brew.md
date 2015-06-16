@@ -29,7 +29,7 @@ brew install caskroom/cask/brew-cask
 # brew-cask installations
 ```bash
 brew cask install iterm2 atom
-brew cask install truecrypt keepassx multibit
+brew cask install keepassx multibit
 brew cask install google-chrome chromium firefox
 brew cask install vlc sublime-text transmission
 brew cask install sequel-pro sqlite-database-browser
