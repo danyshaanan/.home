@@ -41,12 +41,11 @@ function renameFiles(files) {
   var done = 0
   var start = Date.now()
   var outputStatus = function(oldName, newName) {
-    // done++
+    done++
     if (!newName) return
-    // var averageTime = (Date.now() - start) / 1000 / done
-    // var timeLeft = averageTime * (files.length - done)
-    // console.log(done + '/' + files.length + ' | ' + Math.ceil(timeLeft) + 's | ' + oldName + ' -> ' + newName)
-    console.log(oldName + ' -> ' + newName)
+    var averageTime = (Date.now() - start) / 1000 / done
+    var timeLeft = averageTime * (files.length - done)
+    console.log(done + '/' + files.length + ' | ' + Math.ceil(timeLeft) + 's | ' + oldName + ' -> ' + newName)
   }
   return files.reduce(function(prev, file) {
     return prev
