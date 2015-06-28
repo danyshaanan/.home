@@ -65,7 +65,7 @@ function shouldRename(file) {
 }
 
 function getNewName(file, res) {
-  var date = res.replace(/:/g, '-').replace(/ /g, '.')
+  var date = res.replace(/:/g, '.').replace(/ /g, '-')
   return file.replace(/^(.*\/)?([^\/]+\.jpe?g)$/i,'$1' + date + '___$2')
 }
 
