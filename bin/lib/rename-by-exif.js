@@ -3,14 +3,14 @@
 'use strict'
 
 var exec = require('child_process').exec
-var exifDataRegex = /exif\:DateTimeOriginal\:\W+(\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2})\W+/
+var validDateRegex = /\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2}/
 
 // Promises:
 
-function promiseExec(command, rejectValue) {
+function promiseExec(command, rejectValue, resolveValue) {
   return new Promise(function(resolve, reject) {
     exec(command, function(error, stdout, stderr) {
-      (error || stderr) ? reject(rejectValue || error || stderr) : resolve(stdout)
+      (error || stderr) ? reject(rejectValue || error || stderr) : resolve(resolveValue || stdout)
     })
   })
 }
@@ -20,28 +20,39 @@ function checkBrewBinExists(name, installName) {
 }
 
 function extractExifData(file) {
-  return promiseExec('identify -verbose ' + file)
+  return promiseExec('identify -format %[EXIF:DateTimeOriginal] "' + file + '"')
 }
 
 function rename(oldName, newName) {
-  console.log(oldName + ' -> ' + newName)
-  return promiseExec('mv ' + oldName + ' ' + newName)
+  return promiseExec('mv "' + oldName + '" "' + newName + '"', null, newName)
 }
 
-function renameFileByExif(file, exifData) {
-  var match = exifData.match(exifDataRegex)
-  if (match && match[1]) {
-    return rename(file, getNewName(file, match[1]))
+function renameFileByDate(file, date) {
+  if (validDateRegex.test(date)) {
+    return rename(file, getNewName(file, date))
   } else {
-    console.log('no exifData found for file ' + file)
+    console.log('file\'s date not valid (' + file + ')')
   }
 }
 
+
+
 function renameFiles(files) {
+  var done = 0
+  var start = Date.now()
+  var outputStatus = function(oldName, newName) {
+    // done++
+    if (!newName) return
+    // var averageTime = (Date.now() - start) / 1000 / done
+    // var timeLeft = averageTime * (files.length - done)
+    // console.log(done + '/' + files.length + ' | ' + Math.ceil(timeLeft) + 's | ' + oldName + ' -> ' + newName)
+    console.log(oldName + ' -> ' + newName)
+  }
   return files.reduce(function(prev, file) {
     return prev
       .then(extractExifData.bind(null, file))
-      .then(renameFileByExif.bind(null, file))
+      .then(renameFileByDate.bind(null, file))
+      .then(outputStatus.bind(null, file))
   }, Promise.resolve())
 }
 
