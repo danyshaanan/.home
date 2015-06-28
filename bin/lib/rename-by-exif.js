@@ -35,17 +35,16 @@ function renameFileByDate(file, date) {
   }
 }
 
-
-
 function renameFiles(files) {
   var done = 0
   var start = Date.now()
   var outputStatus = function(oldName, newName) {
     done++
-    if (!newName) return
-    var averageTime = (Date.now() - start) / 1000 / done
-    var timeLeft = averageTime * (files.length - done)
-    console.log(done + '/' + files.length + ' | ' + Math.ceil(timeLeft) + 's | ' + oldName + ' -> ' + newName)
+    if (newName) console.log([
+      done + '/' + files.length,
+      parseTime((Date.now() - start) / 1000 / done * (files.length - done)),
+      oldName + ' -> ' + newName
+    ].join(' | '))
   }
   return files.reduce(function(prev, file) {
     return prev
@@ -56,6 +55,14 @@ function renameFiles(files) {
 }
 
 // Not Promises:
+
+function parseTime(s) {
+  return [60, 60, Infinity].map(function(max) {
+    var t = Math.floor(s % max)
+    s /= 60
+    return t < 10 ? '0' + t : t
+  }).reverse().join(':')
+}
 
 function shouldRename(file) {
   if            (/___/.test(file)) console.log('Skipping file: ' + file + ' (already renamed)')
