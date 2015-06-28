@@ -2,49 +2,38 @@
 
 'use strict'
 
-var child_process = require('child_process')
+var exec = require('child_process').exec
+var exifDataRegex = /exif\:DateTimeOriginal\:\W+(\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2})\W+/
 
-// Prime Promises:
+// Promises:
 
-function resolved() {
-  return new Promise(function(r){r()})
+function promiseExec(command, rejectValue) {
+  return new Promise(function(resolve, reject) {
+    exec(command, function(error, stdout, stderr) {
+      (error || stderr) ? reject(rejectValue || error || stderr) : resolve(stdout)
+    })
+  })
 }
 
 function checkBrewBinExists(name, installName) {
-  return new Promise(function(resolve, reject) {
-    child_process.exec('which ' + name, function(error, stdout, stderr) {
-      error ? reject('please install ' + installName || name) : resolve()
-    })
-  })
+  return promiseExec('which ' + name, 'please install ' + (installName || name))
 }
 
 function extractExifData(file) {
-  return new Promise(function(resolve, reject) {
-    child_process.exec('identify -verbose ' + file, function(error, stdout, stderr) {
-      (error || stderr) ? reject(error || stderr) : resolve(stdout)
-    })
-  })
+  return promiseExec('identify -verbose ' + file)
 }
 
 function rename(oldName, newName) {
-  return new Promise(function(resolve, reject) {
-    child_process.exec('mv ' + oldName + ' ' + newName, function(error, stdout, stderr) {
-      error ? reject(error) : resolve(console.log(oldName + ' -> ' + newName))
-    })
-  })
+  console.log(oldName + ' -> ' + newName)
+  return promiseExec('mv ' + oldName + ' ' + newName)
 }
 
-// Composite Promises:
-
 function renameFileByExif(file, exifData) {
-  var match = exifData.match(/exif\:DateTimeOriginal\:(.*)/)
-  var res = match && match[1].trim()
-  if (!res) {
-    console.log('no exifData found for file ' + file)
-  } else if (!/\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2}/.test(res)) {
-    console.log('exifData has wrong format for file ' + file)
+  var match = exifData.match(exifDataRegex)
+  if (match && match[1]) {
+    return rename(file, getNewName(file, match[1]))
   } else {
-    return rename(file, getNewName(file, res))
+    console.log('no exifData found for file ' + file)
   }
 }
 
@@ -53,7 +42,7 @@ function renameFiles(files) {
     return prev
       .then(extractExifData.bind(null, file))
       .then(renameFileByExif.bind(null, file))
-  }, resolved())
+  }, Promise.resolve())
 }
 
 // Not Promises:
@@ -64,17 +53,28 @@ function shouldRename(file) {
   else return true
 }
 
+function insertBeforeBaseName(insert, path) {
+  return path.replace(/^(.*\/)?([^\/]+\.jpe?g)$/i,'$1' + insert + '$2')
+}
+
+function makeDateSafeFilename(date) {
+  return date.replace(/:/g, '.').replace(/ /g, '-')
+}
+
 function getNewName(file, res) {
-  var date = res.replace(/:/g, '.').replace(/ /g, '-')
-  return file.replace(/^(.*\/)?([^\/]+\.jpe?g)$/i,'$1' + date + '___$2')
+  return insertBeforeBaseName(makeDateSafeFilename(res) + '___', file)
 }
 
 //////////////////////////////////////////////////
 
-var setup = resolved()
-  .then(checkBrewBinExists.bind(null, 'identify', 'imagemagick'))
-  .then(checkBrewBinExists.bind(null, 'rename'))
-  .then(renameFiles.bind(null, process.argv.slice(2).filter(shouldRename)))
+Promise.all([
+    checkBrewBinExists('identify', 'imagemagick'),
+    checkBrewBinExists('rename'),
+  ])
+  .then(function() {
+    return process.argv.slice(2).filter(shouldRename)
+  })
+  .then(renameFiles)
   .catch(function(error) { console.log('Error!', error) })
 
 
