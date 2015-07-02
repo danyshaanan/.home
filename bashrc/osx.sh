@@ -15,9 +15,9 @@ export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 export PATH="$PATH:$HOME/.rvm/bin"
-[ -s ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+[ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
-[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh
 
 alias run='open'
 alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
