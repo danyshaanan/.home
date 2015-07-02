@@ -1,17 +1,25 @@
-# NTFS write on OSX
+
+# Enable writing on NTFS (OUTDATED)
 
 Adapted from [here](http://apple.stackexchange.com/questions/106589/write-in-ntfs-using-mavericks).
 ```bash
 brew update
-brew install osxfuse
 brew install ntfs-3g
+brew cask install osxfuse
 sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
 sudo ln -s /usr/local/sbin/mount_ntfs /sbin/mount_ntfs
-brew info osxfuse
 ```
-The last command will output two lines, starting with `sudo /bin/cp` and `sudo chmod`. Run those.
 
+# Switch the Finder icon in the Dock:
 
+Icon by [Esxxi](http://esxxi.me/)
+
+```bash
+cp ~/.home/installations/assets/finder.png /System/Library/CoreServices/Dock.app/Contents/Resources/finder.png
+ls -l /private/var/folders/*/*/*/com.apple.dock.iconcache
+rm /private/var/folders/*/*/*/com.apple.dock.iconcache
+killall Dock
+```
 
 # MongoDB
 

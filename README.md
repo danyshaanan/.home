@@ -1,23 +1,71 @@
-## These are my OSX user configurations files
+## OSX initial setup
 
-To install on a new machine:
+On a new computer:
+* Boot with Command-R to reformat the drive to a case-sensitive filesystem.
+* Open terminal and type `git` to trigger xcode's git installations.
+
+### Install these dot files:
 
 ```bash
 git clone https://github.com/danyshaanan/.home.git ~/.home
 bash ~/.home/init.sh
 ```
 
-To setup git, brew, brew-cask, node, and useful installations:
+(If some of the linked file already exist, remove or rename them and run again).
+
+### Install brew, brew-cask, nvm, and rvm:
+
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install git vim rename tree ruby caskroom/cask/brew-cask
-brew cask install iterm2 atom keepassx google-chrome chromium vlc sequel-pro arduino
+sudo chown -R `whoami` /usr/local
 
+brew install caskroom/cask/brew-cask
+
+# remove old node version with http://tinyurl.com/removenode
 git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm && git checkout `git describe --abbrev=0 --tags` && bash
 nvm install stable && nvm alias default stable
+# the required `[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh` is included in .home
 
-npm i -g tcmount nsyrc cli-mandelbrot grunt-cli fuck-you
+curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ignore-dotfiles
+rvm install 2.2.1
+# the required `[ -s ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm` is included in .home
 ```
 
-Check out the `installations` directory for more initial setup.
+### Main installations
+
+```bash
+brew install git unrar imagemagick mpg123 youtube-dl
+brew install cowsay figlet tree rename trash wget curl
+brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
+```
+
+```bash
+brew cask install iterm2 atom osxfuse keepassx google-chrome vlc transmission
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql
+brew cask install arduino # ftdi drivers also required
+```
+
+```bash
+npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs normit fuck-you
+```
+
+### More installations
+
+```bash
+brew install bash-completion git-extras gpg pass ack
+brew install mdbtools mtr ssh-copy-id sshfs vim p7zip
+brew install ddrescue duff testdisk fcrackzip links
+brew install exif exiftool imagemagick freetype jp2a mplayer sox webp
+brew install ruby ack haskell-platform python nginx watch source-highlight
+brew install cdparanoia lame abcde # see https://gist.github.com/danyshaanan/6494096 for abcde
+brew install spark wdiff
+```
+
+```bash
+brew cask install chromium firefox sublime-text sequel-pro sqlite-database-browser nmap
+```
+
+```bash
+npm i -g pm2 grunt-cli gulp karma-cli node-inspector jasmine-node serve tape torrent
+```
