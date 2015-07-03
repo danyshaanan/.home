@@ -1,4 +1,3 @@
 *.swp
-bashrc/work.sh
-bashrc/gitignored.sh
+bashrc/*.gitignore.sh
 .DS_Store
