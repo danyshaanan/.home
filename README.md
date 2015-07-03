@@ -11,8 +11,6 @@ git clone https://github.com/danyshaanan/.home.git ~/.home
 bash ~/.home/init.sh
 ```
 
-(If some of the linked file already exist, remove or rename them and run again).
-
 ### Run the OSX init setup script:
 
 ```bash
