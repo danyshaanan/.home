@@ -70,7 +70,7 @@ alias tu='tcmount -u'
 alias gst='clear && git status'
 alias copydir='pwd | pbcopy'
 alias cdpaste='cd `pbpaste`'
-= () { echo "scale=4; ${*}" | bc ; }
+# = () { echo "scale=4; ${*}" | bc ; }
 g(){ ack $@ --color-match=green --color-filename=blue --smart-case; } # search
 gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
 
