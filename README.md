@@ -52,7 +52,7 @@ brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 
 ```bash
 brew cask install iterm2 atom osxfuse keepassx google-chrome vlc transmission
-brew cask install qlcolorcode qlstephen qlmarkdown
+brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv betterzipql
 brew cask install arduino # ftdi drivers also required
 ```
