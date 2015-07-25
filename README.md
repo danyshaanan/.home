@@ -1,7 +1,20 @@
 ## OSX initial setup
 
-On a new computer:
-* Boot with Command-R to reformat the drive to a case-sensitive filesystem.
+### Get a proper file system
+
+Case-insensitive file systems are bad for you.
+Reformat your drive to a case-sensitive one:
+
+Open [Recovery mode](https://support.apple.com/en-us/HT201314) by booting while holding Command-R,
+use disk utility to reformat your drive to `Mac OS Extended (Case-sensitive, Journaled)`,
+and use the installer to reinstall your OS over the web.
+
+If you don't want to wait several hours for the download to complete,
+you can [create a bootable installer](https://support.apple.com/en-us/ht201372) ahead of time,
+and run it from the Startup Manager which is accessed by booting while holding the Option key.
+
+### Get Git
+
 * Open terminal and type `git` to trigger xcode's git installations.
 
 ### Install these dot files:
