@@ -75,6 +75,10 @@ npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs
 npm i -g normit pm2 grunt-cli serve fuck-you
 ```
 
+```bash
+apm install linter linter-eslint language-arduino
+```
+
 ### More installations
 
 ```bash
