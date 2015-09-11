@@ -86,7 +86,7 @@ brew install bash-completion git-extras gpg pass ack
 brew install mdbtools mtr ssh-copy-id sshfs vim p7zip
 brew install ddrescue duff testdisk fcrackzip links
 brew install exif exiftool imagemagick freetype jp2a mplayer sox webp
-brew install ruby ack haskell-platform python nginx watch source-highlight
+brew install ruby ack python nginx watch source-highlight
 brew install cdparanoia lame abcde
 brew install spark wdiff
 ```
