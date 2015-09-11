@@ -97,5 +97,5 @@ brew cask install sequel-pro sqlite-database-browser nmap
 ```
 
 ```bash
-npm i -g gulp karma-cli node-inspector tape torrent
+npm i -g gulp karma-cli node-inspector torrent
 ```
