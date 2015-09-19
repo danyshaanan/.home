@@ -12,7 +12,6 @@
     "node": ">=0.11.0"
   },
   "dependencies": {
-    "open": "0.0.5"
   },
   "devDependencies": {
     "eslint": "1.1.0",
