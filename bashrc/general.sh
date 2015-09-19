@@ -73,6 +73,7 @@ alias cdpaste='cd `pbpaste`'
 # = () { echo "scale=4; ${*}" | bc ; }
 g(){ ack $@ --color-match=green --color-filename=blue --smart-case; } # search
 gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
+commit () { git commit $* && commitda; }
 
 #var:
 alias vimencrypt='vim -u ~/.home/conf/vimencrypt -x'
