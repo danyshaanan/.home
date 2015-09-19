@@ -40,7 +40,7 @@ function renameFiles(files) {
   var start = Date.now()
   var outputStatus = function(oldName, newName) {
     done++
-    if (newName) console.log([
+    newName && console.log([
       done + '/' + files.length,
       parseTime((Date.now() - start) / 1000 / done * (files.length - done)),
       oldName + ' -> ' + newName
@@ -65,13 +65,13 @@ function parseTime(s) {
 }
 
 function shouldRename(file) {
-  if            (/___/.test(file)) console.log('Skipping file: ' + file + ' (already renamed)')
+  if (/___/.test(file)) console.log('Skipping file: ' + file + ' (already renamed)')
   else if (!/.jpe?g$/i.test(file)) console.log('Skipping file: ' + file + ' (invalid type)')
   else return true
 }
 
 function insertBeforeBaseName(insert, path) {
-  return path.replace(/^(.*\/)?([^\/]+\.jpe?g)$/i,'$1' + insert + '$2')
+  return path.replace(/^(.*\/)?([^\/]+\.jpe?g)$/i, '$1' + insert + '$2')
 }
 
 function makeDateSafeFilename(date) {
@@ -82,20 +82,12 @@ function getNewName(file, res) {
   return insertBeforeBaseName(makeDateSafeFilename(res) + '___', file)
 }
 
-//////////////////////////////////////////////////
-
 Promise.all([
-    checkBrewBinExists('identify', 'imagemagick'),
-    checkBrewBinExists('rename'),
-  ])
+  checkBrewBinExists('identify', 'imagemagick'),
+  checkBrewBinExists('rename')
+])
   .then(function() {
     return process.argv.slice(2).filter(shouldRename)
   })
   .then(renameFiles)
   .catch(function(error) { console.log('Error!', error) })
-
-
-
-
-
-//
