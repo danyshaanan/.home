@@ -1,0 +1,34 @@
+{
+  "name": "dot-home",
+  "version": "0.0.0",
+  "description": "dot files",
+  "private": true,
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint bin/**/*.js",
+    "test": "npm run lint",
+    "start": "npm test"
+  },
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "dependencies": {
+    "open": "0.0.5"
+  },
+  "devDependencies": {
+    "eslint": "1.1.0",
+    "eslint-config-standard": "4.1.0",
+    "eslint-plugin-standard": "1.2.0",
+    "tape": "4.0.0"
+  },
+  "author": {
+    "name": "Dany Shaanan",
+    "email": "danyshaanan@gmail.com",
+    "url": "http://danyshaanan.com/"
+  },
+  "license": "MIT",
+  "repository": "danyshaanan/.home",
+  "bugs": {
+    "url": "https://github.com/danyshaanan/.home/issues",
+    "email": "danyshaanan@gmail.com"
+  }
+}
