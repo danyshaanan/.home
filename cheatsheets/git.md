@@ -29,3 +29,34 @@ git gc --prune=now
 ### Remove sensitive data from the whole history:
 
 https://help.github.com/articles/remove-sensitive-data/
+
+### Config
+
+Set pull to rebase by default instead of merge:
+```bash
+git config --global --bool pull.rebase true
+git config --global branch.autosetuprebase always
+```
+
+Example config:
+```
+[user]
+	name = YOUR NAME
+	email = YOUR_EMAIL@example.com
+[alias]
+    lg = log -p
+    gui = !sh -c '/usr/local/opt/git/libexec/git-core/git-gui'
+    lg = log --oneline --decorate --graph --all
+[core]
+	autocrlf = false
+	ignorecase = false
+	editor = /usr/bin/vim
+[push]
+	default = simple
+[color]
+	ui = true
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+```
