@@ -76,7 +76,7 @@ npm i -g normit pm2 grunt-cli serve fuck-you
 ```
 
 ```bash
-apm install linter linter-eslint language-arduino
+apm install linter linter-eslint language-arduino editorconfig
 ```
 
 ### More installations
