@@ -74,6 +74,7 @@ alias cdpaste='cd `pbpaste`'
 g(){ ack $@ --color-match=green --color-filename=blue --smart-case; } # search
 gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
 commit () { git commit $* && commitda; }
+alias lastnonda='git log | grep -e "^commit [^d]" -C 3 | head'
 
 #var:
 alias vimencrypt='vim -u ~/.home/conf/vimencrypt -x'
