@@ -49,16 +49,15 @@ txtrst='\e[0m'    # Text Reset
 [ -s /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ] && source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh # OSX
 [ -s /etc/bash_completion.d/git ] && source /etc/bash_completion.d/git #Linux
 
-type __git_ps1 > /dev/null 2> /dev/null && PS1BRANCH='$(__git_ps1)' || PS1BRANCH=''
-which node     > /dev/null 2> /dev/null && PS1NV='[$(node -v | sed "s/^v//" | sed "s/\.[0-9]\{1,\}$//")] '
+type __git_ps1 > /dev/null 2> /dev/null && PS1BRANCH='$(__git_ps1)'
+which node     > /dev/null 2> /dev/null && PS1NODEVERSION='[$(node -v | sed "s/^v//" | sed "s/\.[0-9]\{1,\}$//")] '
 
-PS1TIME='\t'
-PS1USER='\u'
-PS1COMP='\h'
-PS1FLDR='\w'
+# \t is time
+# \u is user
+# \h is comp
+# \w is working directory
 
-# PS1=$txtwht$TIME$bldblk':'$USER'@'$COMP$bldblk':'$txtwht$FLDR$bldblk$BRANCH' $ '$txtrst
-PS1=$PS1TIME':'$PS1USER'@'$PS1COMP' '$PS1NV$PS1FLDR$PS1BRANCH' $ '
+PS1='\t:\u@\h '$PS1NODEVERSION\\w$PS1BRANCH' $ '
 
 
 ################################################################################
