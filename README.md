@@ -77,7 +77,8 @@ npm i -g normit pm2 grunt-cli serve fuck-you
 
 ```bash
 apm install linter linter-eslint language-arduino editorconfig
-apm install highlight-selected file-icons
+apm install highlight-selected file-icons minimap
+apm install git-blame git-log
 ```
 
 ### More installations
