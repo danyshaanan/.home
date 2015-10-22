@@ -81,6 +81,8 @@ apm install highlight-selected file-icons minimap
 apm install git-blame git-log
 ```
 
+Run `missing-installations` to find out which of these packages are missing.
+
 ### More installations
 
 ```bash
