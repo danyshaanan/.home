@@ -59,7 +59,7 @@ rvm install 2.2.1
 
 ```bash
 brew install git unrar imagemagick mpg123 youtube-dl
-brew install cowsay figlet tree rename trash wget curl
+brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 ```
 
@@ -90,7 +90,7 @@ brew install bash-completion git-extras gpg pass ack
 brew install mdbtools mtr ssh-copy-id sshfs vim p7zip
 brew install ddrescue duff testdisk fcrackzip links
 brew install exif exiftool imagemagick freetype jp2a mplayer sox webp
-brew install ruby ack python nginx watch source-highlight
+brew install ruby ack python nginx watch
 brew install cdparanoia lame abcde
 brew install spark wdiff
 ```
