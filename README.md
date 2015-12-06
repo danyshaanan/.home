@@ -58,7 +58,7 @@ rvm install 2.2.1
 ### Main installations
 
 ```bash
-brew install git unrar imagemagick mpg123 youtube-dl
+brew install git tig unrar imagemagick mpg123 youtube-dl
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 ```
