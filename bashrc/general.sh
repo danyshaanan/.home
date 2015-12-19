@@ -76,6 +76,9 @@ gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
 commit () { git commit $* && commitda; }
 alias lastnonda='git log | grep -e "^commit [^d]" -C 3 | head'
 
+alias goatsay='cowsay -f ~/.home/cowfiles/goat.cow -T "V "'
+alias goatthink='cowthink -f ~/.home/cowfiles/goat.cow -T "V "'
+
 #var:
 alias vimencrypt='vim -u ~/.home/conf/vimencrypt -x'
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
