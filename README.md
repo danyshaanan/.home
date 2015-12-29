@@ -71,7 +71,7 @@ brew cask install teensy arduino # ftdi drivers also required
 ```
 
 ```bash
-npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs
+npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs goatsay
 npm i -g normit pm2 grunt-cli serve fuck-you
 ```
 
