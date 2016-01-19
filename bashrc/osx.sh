@@ -17,8 +17,6 @@ export LESS=' -R '
 export PATH="$PATH:$HOME/.rvm/bin"
 [ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
-[ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh
-
 alias run='open'
 alias df='df -h | grep --color=no -e "^Filesystem\|^/dev/"'
 alias screenshot='imageSnap'
