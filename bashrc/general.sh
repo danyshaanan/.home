@@ -69,14 +69,11 @@ alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias tm='tcmount'
 alias tu='tcmount -u'
-alias gst='clear && git status'
+
 alias copydir='pwd | pbcopy'
 alias cdpaste='cd `pbpaste`'
 # = () { echo "scale=4; ${*}" | bc ; }
 g(){ ack $@ --color-match=green --color-filename=blue --smart-case; } # search
-gitick () { echo $1 >> $1 && git add $1 && git commit -m $1; }
-commit () { git commit $* && commitda; }
-alias lastnonda='git log | grep -e "^commit [^d]" -C 3 | head'
 
 #alias goatsay='cowsay -f ~/.home/cowfiles/goat.cow -T "V "'
 #alias goatthink='cowthink -f ~/.home/cowfiles/goat.cow -T "V "'
