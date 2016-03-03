@@ -6,7 +6,7 @@ const pms = [
   {
     name: 'brew',
     list: 'brew list',
-    installWith: 'brew install ',
+    installWith: 'brew install',
     getRequirements: lines => {
       return lines.reduce((installations, line) => {
         line.split(' ').forEach(word => {
@@ -20,7 +20,7 @@ const pms = [
   {
     name: 'brew-cask',
     list: 'brew cask list',
-    installWith: 'brew cask install ',
+    installWith: 'brew cask install',
     getRequirements: lines => {
       return lines.reduce((installations, line) => {
         let lineEnd
@@ -37,7 +37,7 @@ const pms = [
   {
     name: 'npm',
     list: 'npm -g list',
-    installWith: 'npm i -g ',
+    installWith: 'npm i -g',
     getRequirements: lines => {
       return lines.reduce((installations, line) => {
         return installations.concat(line.split(' ').filter(word => !~['npm', 'i', '-g'].indexOf(word)))
@@ -47,7 +47,7 @@ const pms = [
   {
     name: 'apm',
     list: 'apm list',
-    installWith: 'apm install ',
+    installWith: 'apm install',
     getRequirements: lines => {
       return lines.reduce((installations, line) => {
         return installations.concat(line.split(' ').filter(word => !~['apm', 'install'].indexOf(word)))
@@ -90,7 +90,7 @@ pms.forEach(function(pm) {
     .then(missing => {
       missing.forEach(module => {
         listFailure()
-        console.log(`${pm.name} install ${module}`)
+        console.log(`${pm.installWith} ${module}`)
       })
     })
     .catch(e => {
