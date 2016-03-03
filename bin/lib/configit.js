@@ -13,7 +13,7 @@ function getIni(path) {
   return p.ini.parse(p.fs.readFileSync(path, 'utf-8'))
 }
 
-const expected = getIni('gitconfig')
+const expected = getIni(__dirname + '/../../gitconfig')
 const actual = getIni(p.os.homedir() + '/.gitconfig')
 const diff = {}
 
