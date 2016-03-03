@@ -2,14 +2,14 @@
 
 'use strict'
 
-var pms = [
+const pms = [
   {
     name: 'brew',
     list: 'brew list',
     installWith: 'brew install ',
-    getRequirements: function(lines) {
-      return lines.reduce(function(installations, line) {
-        line.split(' ').forEach(function(word) {
+    getRequirements: lines => {
+      return lines.reduce((installations, line) => {
+        line.split(' ').forEach(word => {
           if (word[0] === '-') installations[installations.length - 1] += ' ' + word
           else if (!~['brew', 'install'].indexOf(word)) installations.push(word)
         })
@@ -19,12 +19,12 @@ var pms = [
   },
   {
     name: 'brew-cask',
-    list: 'brew-cask list',
+    list: 'brew cask list',
     installWith: 'brew cask install ',
-    getRequirements: function(lines) {
-      return lines.reduce(function(installations, line) {
-        var lineEnd
-        line.split(' ').forEach(function(word) {
+    getRequirements: lines => {
+      return lines.reduce((installations, line) => {
+        let lineEnd
+        line.split(' ').forEach(word => {
           if (lineEnd) return
           else if (word[0] === '-') installations[installations.length - 1] += ' ' + word
           else if (word[0] === '#') lineEnd = true
@@ -38,9 +38,9 @@ var pms = [
     name: 'npm',
     list: 'npm -g list',
     installWith: 'npm i -g ',
-    getRequirements: function(lines) {
-      return lines.reduce(function(installations, line) {
-        return installations.concat(line.split(' ').filter(function(word) { return !~['npm', 'i', '-g'].indexOf(word) }))
+    getRequirements: lines => {
+      return lines.reduce((installations, line) => {
+        return installations.concat(line.split(' ').filter(word => !~['npm', 'i', '-g'].indexOf(word)))
       }, [])
     }
   },
@@ -48,9 +48,9 @@ var pms = [
     name: 'apm',
     list: 'apm list',
     installWith: 'apm install ',
-    getRequirements: function(lines) {
-      return lines.reduce(function(installations, line) {
-        return installations.concat(line.split(' ').filter(function(word) { return !~['apm', 'install'].indexOf(word) }))
+    getRequirements: lines => {
+      return lines.reduce((installations, line) => {
+        return installations.concat(line.split(' ').filter(word => !~['apm', 'install'].indexOf(word)))
       }, [])
     }
   }
@@ -59,36 +59,41 @@ var pms = [
 // /////////////////////////////////////////////////////////////////////////////
 
 function promiseExec(command) {
-  return new Promise(function(resolve, reject) {
-    require('child_process').exec(command, {maxBuffer: 1024 * 1024 * 5}, function(error, stdout, stderr) {
+  return new Promise((resolve, reject) => {
+    require('child_process').exec(command, {maxBuffer: 1024 * 1024 * 5}, (error, stdout, stderr) => {
       ;(error || stderr) ? reject(error || stderr) : resolve(stdout)
     })
   })
 }
 
 function missingReq(installed, req) {
-  return installed.every(function(inst) {
-    return req.replace(/.*\//, '').replace(/ .*/, '') !== inst.replace(/.* /, '').replace(/@.*/, '')
-  })
+  return installed.every(inst => req.replace(/.*\//, '').replace(/ .*/, '') !== inst.replace(/.* /, '').replace(/@.*/, ''))
 }
 
-var lines = require('fs').readFileSync(__dirname + '/../../README.md').toString().split('\n')
+let lines = require('fs').readFileSync(__dirname + '/../../README.md').toString().split('\n')
 
-var i = lines.indexOf('### Main installations')
-var j = lines.indexOf('### More installations')
+const i = lines.indexOf('### Main installations')
+const j = lines.indexOf('### More installations')
 lines = lines.slice(i, j)
 
-console.log('Missing installations:')
+let listFailure = () => {
+  console.log(require('chalk').yellow('Missing installations:'))
+  process.on('exit', () => process.exit(1))
+  listFailure = () => {}
+}
 
 pms.forEach(function(pm) {
-  pm.lines = lines.filter(function(line) { return line.indexOf(pm.installWith) === 0 })
+  pm.lines = lines.filter(line => line.indexOf(pm.installWith) === 0)
   promiseExec(pm.list)
-    .then(function(output) { return output.split('\n').filter(Boolean) })
-    .then(function(installed) {
-      return pm.getRequirements(pm.lines).filter(missingReq.bind(null, installed))
+    .then(output => output.split('\n').filter(Boolean))
+    .then(installed => pm.getRequirements(pm.lines).filter(missingReq.bind(null, installed)))
+    .then(missing => {
+      missing.forEach(module => {
+        listFailure()
+        console.log(`${pm.name} install ${module}`)
+      })
     })
-    .then(function(missing) {
-      console.log(pm.name + ': ' + (missing.length ? missing.join(', ') : '<NONE>'))
+    .catch(e => {
+      throw e
     })
-    .catch(function(e) { console.log(e, e.stack) })
 })
