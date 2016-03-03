@@ -5,18 +5,20 @@
   "private": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint bin/**/*.js",
-    "test": "npm run lint",
+    "test": "npm run lint && configit",
     "start": "npm test"
   },
   "engines": {
     "node": ">=0.11.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "chalk": "1.1.1",
     "eslint": "1.1.0",
     "eslint-config-standard": "4.1.0",
     "eslint-plugin-standard": "1.2.0",
+    "ini": "1.3.4",
+    "lodash": "4.6.1",
     "tape": "4.0.0"
   },
   "author": {

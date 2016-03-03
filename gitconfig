@@ -1,0 +1,36 @@
+#git config --global alias.cp 'cherry-pick -x'
+#git config --global alias.lg 'log --oneline --decorate --graph --all'
+#git config --global alias.tick '!echo $1 >> $1 && git add $1 && git commit -m $1'
+#git config --global alias.unpushed 'log --branches --not --remotes --simplify-by-decoration --decorate --oneline'
+#git config --global core.autocrlf false
+#git config --global ignorecase false
+#git config --global editor /usr/bin/vim
+#git config --global push.default simple
+#git config --global color.ui true
+#git config --global branch.autosetuprebase always
+#git config --global pull.rebase true
+#git config --global rebase.autostash true
+#git config --global log.follow true
+
+[alias]
+	cp = cherry-pick -x
+	lg = log --oneline --decorate --graph --all
+  tick = !echo $1 >> $1 && git add $1 && git commit -m $1
+  ll = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+	unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+[core]
+	autocrlf = false
+	ignorecase = false
+	editor = /usr/bin/vim
+[push]
+	default = simple
+[color]
+	ui = true
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[rebase]
+  autostash = true
+[log]
+	follow = true
