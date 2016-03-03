@@ -4,7 +4,7 @@
   "description": "dot files",
   "private": true,
   "scripts": {
-    "lint": "./node_modules/.bin/eslint bin/**/*.js",
+    "lint": "eslint .",
     "test": "npm run lint && configit",
     "start": "npm test"
   },
