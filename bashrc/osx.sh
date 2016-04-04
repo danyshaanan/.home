@@ -31,6 +31,7 @@ alias eject='drutil eject' # remove when cds will finally die
 alias updatebrewcask='brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias remotelogin='sudo systemsetup -setremotelogin' # on or off
+alias rmds='find . -name .DS_Store -exec rm {} \;'
 
 osxsleep() {
 	sleep `echo "scale=4; 60 * ${1:-0}" | bc` && pmset sleepnow
