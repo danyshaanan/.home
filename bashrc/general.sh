@@ -69,6 +69,7 @@ alias d='date +"%Y%m%d"'
 alias t='date +"%H%M%S"'
 alias tm='tcmount'
 alias tu='tcmount -u'
+alias tc='truecrypt -t -c --volume-type=normal -k="" --random-source=/dev/urandom'
 
 alias copydir='pwd | pbcopy'
 alias cdpaste='cd `pbpaste`'
