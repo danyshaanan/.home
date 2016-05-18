@@ -13,7 +13,7 @@
 #git config --global log.follow true
 
 [alias]
-	cp = cherry-pick -x
+	cp = cherry-pick
 	lg = log --oneline --decorate --graph --all
   tick = !echo $1 >> $1 && git add $1 && git commit -m $1
   ll = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
