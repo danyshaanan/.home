@@ -13,6 +13,8 @@ If you don't want to wait several hours for the download to complete,
 you can [create a bootable installer](https://support.apple.com/en-us/ht201372) ahead of time,
 and run it from the Startup Manager which is accessed by booting while holding the Option key.
 
+Note: The Steam game platform refuses to run on case sensitive file systems.
+
 ### Get Git
 
 * Open terminal and type `git` to trigger xcode's git installations.
