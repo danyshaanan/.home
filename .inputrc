@@ -1,0 +1,16 @@
+
+# "page up" and "page down":
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# up/down:
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Don't echo ^C in line:
+set echo-control-characters off
+
+# Ignore case on tab completion
+set completion-ignore-case On
+
+set bell-style off

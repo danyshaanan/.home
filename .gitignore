@@ -1,0 +1,5 @@
+*.swp
+bashrc/*.gitignore.sh
+.DS_Store
+node_modules
+npm-debug.log
