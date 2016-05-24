@@ -47,7 +47,7 @@ txtrst='\e[0m'    # Text Reset
 
 
 [ -s /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ] && source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh # OSX
-[ -s /etc/bash_completion.d/git ] && source /etc/bash_completion.d/git #Linux
+[ -s /etc/bash_completion.d/git-prompt ] && source /etc/bash_completion.d/git-prompt #Linux
 
 type __git_ps1 > /dev/null 2> /dev/null && PS1BRANCH='$(__git_ps1)'
 which node     > /dev/null 2> /dev/null && PS1NODEVERSION='[$(node -v | sed "s/^v//" | sed "s/\.[0-9]\{1,\}$//")] '
