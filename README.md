@@ -5,18 +5,19 @@ Developed and tested on
 
 ### Global and root setup
 
+###### apt-get
+```bash
+wget https://raw.githubusercontent.com/danyshaanan/.home/debian/conf/sources.list
+mv -i /etc/apt/sources.list{,.bu}
+mv -i sources.list /etc/apt/
+apt-get update
+apt-get install vim git nginx sudo curl ruby tree figlet
+```
+
 ###### Dotfiles
 ```bash
 git clone -b debian https://github.com/danyshaanan/.home ~/.home
 bash ~/.home/scripts/init.sh
-```
-
-###### apt-get
-```bash
-mv -i /etc/apt/sources.list{,.bu}
-cp -i /root/.home/conf/sources.list /etc/apt/
-apt-get update
-apt-get install vim git nginx sudo curl ruby tree figlet
 ```
 
 ###### Node
