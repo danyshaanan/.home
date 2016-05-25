@@ -1,24 +1,31 @@
-## Debian initial setup
+## Debian dot-files and setup
 
-Setup on:
-```bash
-> uname -a
-Linux NAME 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 GNU/Linux
-```
+Developed and tested on
+`Linux HOSTNAME 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 GNU/Linux`
+
 ### Root user
 
 ```bash
-ssh-keygen # and follow prompts
-touch ~/.ssh/authorized_keys
-mv -i etc/apt/sources.list etc/apt/sources.list.bu
-cp -i files/etc.apt.sources.list etc/apt/sources.list
+# Access:
+ssh-keygen
+vi ~/.ssh/authorized_keys
+
+# Install:
+mv -i /etc/apt/sources.list{,.bu}
+cp -i /root/.home/conf/sources.list /etc/apt/
 apt-get update
 apt-get install vim git nginx curl ruby tree figlet
 
-adduser git --disabled-password # and follow prompts
-adduser bob --disabled-password # and follow prompts
+# Users:
+adduser git --disabled-password
+adduser bob --disabled-password
 
-# Rename the hostname and reboot:
+# Nginx:
+mv -i /etc/nginx/sites-available/default{,.bu}
+cp -i /root/.home/conf/default /etc/nginx/sites-available/
+service nginx restart
+
+# HOSTNAME:
 vi /etc/hostname
 vi /etc/hosts
 reboot
@@ -27,21 +34,16 @@ reboot
 ### Any user
 
 ```bash
-git clone -b debian https://github.com/danyshaanan/.home.git ~/.home
-bash ~/.home/init.sh
+# These settings:
+git clone -b debian https://github.com/danyshaanan/.home ~/.home
+bash ~/.home/scripts/init.sh
 
-ssh-keygen # and follow prompts
-touch ~/.ssh/authorized_keys
+# Access:
+ssh-keygen
+vi ~/.ssh/authorized_keys
 
-# NVM:
-git clone https://github.com/creationix/nvm.git ~/.nvm
-cd ~/.nvm && git checkout `git describe --abbrev=0 --tags` && bash
-nvm install stable && nvm alias default stable
-
+# Node:
+bash ~/.home/scripts/nvm.sh
+bash
 npm i -g cli-mandelbrot goatsay pm2 grunt-cli serve
-```
-
-By root:
-```bash
-cat ~/.ssh/authorized_keys >> ~bob/.ssh/authorized_keys
 ```
