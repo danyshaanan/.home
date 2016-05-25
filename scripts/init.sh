@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for NAME in bash_profile bashrc inputrc screenrc vimrc editorconfig nvmrc
+for NAME in bash_profile bashrc inputrc screenrc vimrc
 do
   DEST=$HOME/.$NAME
   [ -f $DEST ] && mv $DEST $DEST.moved.$(date +"%Y%m%d.%H%M%S")
