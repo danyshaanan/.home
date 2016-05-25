@@ -3,47 +3,51 @@
 Developed and tested on
 `Linux HOSTNAME 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 GNU/Linux`
 
-### Root user
+### Global and root setup
 
+###### Dotfiles
 ```bash
-# Access:
-ssh-keygen
-vi ~/.ssh/authorized_keys
+git clone -b debian https://github.com/danyshaanan/.home ~/.home
+bash ~/.home/scripts/init.sh
+```
 
-# Install:
+###### apt-get
+```bash
 mv -i /etc/apt/sources.list{,.bu}
 cp -i /root/.home/conf/sources.list /etc/apt/
 apt-get update
 apt-get install vim git nginx curl ruby tree figlet
+```
 
-# Users:
-adduser git --disabled-password
-adduser bob --disabled-password
+###### Node
+```bash
+bash ~/.home/scripts/nvm.sh
+bash
+npm i -g cli-mandelbrot goatsay pm2 grunt-cli serve
+```
 
-# Nginx:
+###### Nginx
+```bash
 mv -i /etc/nginx/sites-available/default{,.bu}
 cp -i /root/.home/conf/default /etc/nginx/sites-available/
 service nginx restart
+```
 
-# HOSTNAME:
+###### HOSTNAME
+```bash
 vi /etc/hostname
 vi /etc/hosts
 reboot
 ```
 
-### Any user
+### Add users
 
 ```bash
-# These settings:
-git clone -b debian https://github.com/danyshaanan/.home ~/.home
-bash ~/.home/scripts/init.sh
+adduser git --disabled-password
+mkdir -m 700 ~git/.ssh && chown -R git ~git/.ssh
+cat ~/.ssh/authorized_keys >> ~git/.ssh/authorized_keys
 
-# Access:
-ssh-keygen
-vi ~/.ssh/authorized_keys
-
-# Node:
-bash ~/.home/scripts/nvm.sh
-bash
-npm i -g cli-mandelbrot goatsay pm2 grunt-cli serve
+# deluser --remove-home git
 ```
+
+As the user, run the 'Dotfiles' and 'Node' sections above.
