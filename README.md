@@ -1,7 +1,10 @@
-## Linux server initial setup
+## Debian initial setup
 
-For some specific Debian servers
-
+Setup on:
+```bash
+> uname -a
+Linux NAME 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 GNU/Linux
+```
 ### Root user
 
 ```bash
@@ -14,6 +17,11 @@ apt-get install vim git nginx curl ruby tree figlet
 
 adduser git --disabled-password # and follow prompts
 adduser bob --disabled-password # and follow prompts
+
+# Rename the hostname and reboot:
+vi /etc/hostname
+vi /etc/hosts
+reboot
 ```
 
 ### Any user
