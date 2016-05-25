@@ -1,4 +1,5 @@
 
+export EDITOR=vim
 export PATH="$PATH:$HOME/.home/bin:/usr/games"
 
 [ -s ~/.nvm/nvm.sh ] && . ~/.nvm/nvm.sh

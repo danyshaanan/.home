@@ -16,7 +16,7 @@ bash ~/.home/scripts/init.sh
 mv -i /etc/apt/sources.list{,.bu}
 cp -i /root/.home/conf/sources.list /etc/apt/
 apt-get update
-apt-get install vim git nginx curl ruby tree figlet
+apt-get install vim git nginx sudo curl ruby tree figlet
 ```
 
 ###### Node
@@ -43,11 +43,13 @@ reboot
 ### Add users
 
 ```bash
-adduser git --disabled-password
-mkdir -m 700 ~git/.ssh && chown -R git ~git/.ssh
-cat ~/.ssh/authorized_keys >> ~git/.ssh/authorized_keys
+adduser --disabled-password bob
+mkdir -m 700 ~bob/.ssh && chown -R bob ~bob/.ssh
+cat ~/.ssh/authorized_keys >> ~bob/.ssh/authorized_keys
+chown -R bob ~bob/.ssh/authorized_keys
 
-# deluser --remove-home git
+# To permit passwordless sudo, add "bob ALL=NOPASSWD:ALL" via visudo
+# To delete a user, run "deluser --remove-home bob"
 ```
 
 As the user, run the 'Dotfiles' and 'Node' sections above.
