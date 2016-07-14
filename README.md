@@ -82,6 +82,10 @@ apm install linter linter-eslint language-arduino editorconfig
 apm install highlight-selected file-icons file-types minimap react
 apm install synced-sidebar node-debugger pretty-json
 apm install git-blame git-log
+
+apm install fonts
+# settings => packages => fonts => settings => font-family = FiraCode
+# cat ~/.home/conf/atom.stylesheet.ligatures.less >> ~/.atom/styles.less
 ```
 
 Run `missing-installations` to find out which of these packages are missing.
