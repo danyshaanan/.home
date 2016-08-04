@@ -9,3 +9,9 @@ prhash () {
   REMOTE=`git config --get branch.$BRANCH.remote`
   (git fetch $REMOTE refs/pull/$1/merge > /dev/null 2> /dev/null) && git rev-parse FETCH_HEAD;
 }
+
+gh() {
+  gcpath=$HOME/.gh/$1
+  [[ -d $gcpath/.git ]] || git clone git@github.com:$1.git $gcpath
+  cd $gcpath
+}
