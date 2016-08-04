@@ -15,3 +15,7 @@ gh() {
   [[ -d $gcpath/.git ]] || git clone git@github.com:$1.git $gcpath
   cd $gcpath
 }
+
+ghj() {
+  gh danyshaanan/$1
+}
