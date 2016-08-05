@@ -1,10 +1,15 @@
 #!/usr/bin/env node
-/* eslint brace-style:0 */
 'use strict'
 
 const p = (deps => {
-  try { return deps.reduce((o, r) => (o[r] = require(r), o), {}) }
-  catch(e) { throw new Error('Missing dependencies!') }
+  try {
+    return deps.reduce((o, r) => {
+      o[r] = require(r)
+      return o
+    }, {})
+  } catch (e) {
+    throw new Error('Missing dependencies!')
+  }
 })(['os', 'fs', 'ini', 'lodash', 'chalk'])
 
 const _ = p.lodash
@@ -13,8 +18,8 @@ function getIni(path) {
   return p.ini.parse(p.fs.readFileSync(path, 'utf-8'))
 }
 
-const expected = getIni(__dirname + '/../../gitconfig')
-const actual = getIni(p.os.homedir() + '/.gitconfig')
+const expected = getIni(`${__dirname}/../../gitconfig`)
+const actual = getIni(`${p.os.homedir()}/.gitconfig`)
 const diff = {}
 
 _.forIn(expected, (section, sectionName) => {
