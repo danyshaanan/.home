@@ -80,8 +80,8 @@ npm i -g normit pm2 grunt-cli serve fuck-you npm-check
 ```bash
 apm install linter linter-eslint language-arduino editorconfig
 apm install highlight-selected file-icons file-types minimap react
-apm install synced-sidebar node-debugger pretty-json
-apm install git-blame git-log
+apm install synced-sidebar pretty-json
+apm install git-log
 
 apm install fonts
 # settings => packages => fonts => settings => font-family = FiraCode
