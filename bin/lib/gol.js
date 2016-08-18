@@ -5,6 +5,7 @@
 const [ROWS, COLUMNS] = [process.stdout.rows, process.stdout.columns >> 1]
 const N = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]]
 
+// const mda = (...A) => ((g, ...B) => g(g, ...B))((f, d, ...D) => d ? [...Array(d)].map(() => f(f, ...D)) : 0, ...A)
 const mda = (d, ...D) => d ? [...Array(d)].map(_ => mda(...D)) : 0
 const populate = (a, f) => a.map(v => Array.isArray(v) ? populate(v, f) : f())
 
