@@ -13,3 +13,6 @@ end
 function nvm
   type bass >/dev/null ^/dev/null; and bass source ~/.nvm/nvm.sh ';' nvm $argv
 end
+
+echo 'nvm v'(nvm --version)
+echo 'node '(node -v)
