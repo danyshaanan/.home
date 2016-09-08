@@ -1,10 +1,9 @@
 #fish
 
 ```bash
+ln -s ~/.{home,config}/fish
 brew install fish
-sudo su
-sudo echo /usr/local/bin/fish >> /etc/shells
-exit
+sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
 chsh -s /usr/local/bin/fish # to revert: chsh -s /bin/bash
 
 fish
