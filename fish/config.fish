@@ -1,5 +1,5 @@
 
-set PATH /Users/dany/.home/bin $PATH
+set PATH /Users/dany/.home/bin /usr/local/bin $PATH
 
 alias ll "ls -lh"
 alias l "clear; and ll"
