@@ -11,6 +11,7 @@
 #git config --global pull.rebase true
 #git config --global rebase.autostash true
 #git config --global log.follow true
+#git config --global diff.indentHeuristic true
 
 [alias]
 	cp = cherry-pick
@@ -34,3 +35,5 @@
   autostash = true
 [log]
 	follow = true
+[diff]
+  indentHeuristic = true
