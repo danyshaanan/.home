@@ -34,6 +34,8 @@ alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ls1='/bin/ls -1'
 alias ..='cd .. && ll'
+alias x='exit'
+alias c='clear'
 
 #ls varients:
 alias lk='ls -lSrG'         # sort by size, biggest last
