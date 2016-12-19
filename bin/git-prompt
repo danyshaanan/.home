@@ -1,0 +1,42 @@
+git rev-parse 2> /dev/null && git status --porcelain -b | awk '
+
+function repeat(sign, a) {
+  if (a > 5) return a sign
+  if (a > 0) return repeat(sign, a-1) sign
+}
+
+function getState(str, reg) {
+  if (str ~ reg) {
+    sub(reg, "", str)
+    return str
+  }
+}
+
+FNR == 1 {
+  branch = $2
+  sub(/\.{3}.*$/, "", branch)
+  branch = (branch == "master") ? "" : branch " "
+  split($0, syncPartIn2, /[\[\]]/)
+  split(syncPartIn2[2], syncParts, ",")
+  ahead = getState(syncParts[1], "ahead ")
+  behind = getState(syncParts[ahead ? 2 : 1], " ?behind ")
+  done = 1
+}
+
+done == 0 && /^\?\?/          { untracked += done = 1 }
+done == 0 && /^(AA|DD|U.|.U)/ { conflicts += done = 1 }
+done == 0 && /^.[MD]/         { changed   += done = 1 }
+done == 0 && /^[^ ]./         { staged    += done = 1 }
+{ done = 0 }
+
+END {
+  status = repeat("!", conflicts) \
+           repeat("?", untracked) \
+           repeat("¦", changed) \
+           repeat("|", staged) \
+           repeat("↓", behind) \
+           repeat("↑", ahead)
+  status = status ? status : "ok"
+  printf "[" branch status "]"
+}
+'
