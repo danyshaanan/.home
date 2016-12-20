@@ -1,6 +1,7 @@
 git rev-parse 2> /dev/null && git status --porcelain -b | awk '
 
 function repeat(sign, a) {
+  a = int(a)
   if (a > 5) return a sign
   if (a > 0) return repeat(sign, a-1) sign
 }
