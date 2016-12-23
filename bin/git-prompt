@@ -38,6 +38,6 @@ END {
            repeat("↓", behind) \
            repeat("↑", ahead)
   status = status ? status : "ok"
-  printf "[" branch status "]"
+  printf branch status
 }
 '
