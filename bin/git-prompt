@@ -1,4 +1,7 @@
-git rev-parse 2> /dev/null && git status --porcelain -b | awk '
+git rev-parse 2> /dev/null || exit
+[ $(git rev-parse --is-inside-work-tree) == 'true' ] || exit
+
+git status --porcelain -b | awk '
 
 function repeat(sign, a) {
   a = int(a)
