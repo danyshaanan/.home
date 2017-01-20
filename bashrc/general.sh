@@ -53,6 +53,7 @@ alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias oldnospaces='rename s/\ /_/g' #replaces spaces with underline in target files
 alias nospaces='rename s/\ /./g' #replaces spaces with dots in target files
+alias nobrackets='rename s/\[\\\[\\\]\]//g' #removes square brackets
 alias underscorestodots='rename s/_/./g' #replaces underlines with dots in target files
 alias nounderlines='rename s/_/\./g'
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
