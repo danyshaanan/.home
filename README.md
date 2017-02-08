@@ -80,7 +80,7 @@ npm i -g normit pm2 grunt-cli serve fuck-you npm-check
 ```
 
 ```bash
-apm install linter linter-eslint language-arduino editorconfig
+apm install linter linter-eslint language-arduino editorconfig language-x86asm
 apm install highlight-selected file-icons file-types minimap react
 apm install synced-sidebar pretty-json
 apm install git-log
