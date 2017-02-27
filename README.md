@@ -60,7 +60,7 @@ rvm install 2.2.1
 ### Main installations
 
 ```bash
-brew install gnupg2 pinentry
+brew install gnupg2 pinentry pass
 brew install zyedidia/micro/micro
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm
 brew install cowsay figlet tree rename trash wget curl source-highlight
