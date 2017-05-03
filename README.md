@@ -65,7 +65,7 @@ brew install zyedidia/micro/micro
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
-brew install fzf ag
+brew install fzf ag moreutils
 ```
 
 ```bash
