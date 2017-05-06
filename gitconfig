@@ -12,6 +12,7 @@
 #git config --global rebase.autostash true
 #git config --global log.follow true
 #git config --global diff.indentHeuristic true
+#git config --global gpg.program gpg
 
 [alias]
 	cp = cherry-pick
@@ -37,3 +38,5 @@
 	follow = true
 [diff]
   indentHeuristic = true
+[gpg]
+  program = gpg
