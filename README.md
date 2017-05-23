@@ -66,6 +66,7 @@ brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 brew install fzf ag moreutils
+brew cask install java && brew install scala
 ```
 
 ```bash
@@ -84,7 +85,7 @@ npm i -g normit pm2 grunt-cli serve fuck-you npm-check
 apm install linter linter-eslint language-arduino editorconfig language-x86asm
 apm install highlight-selected file-icons file-types minimap react
 apm install synced-sidebar pretty-json
-apm install git-log
+apm install git-log language-scala
 
 apm install fonts
 # settings => packages => fonts => settings => font-family = FiraCode
