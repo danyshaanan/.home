@@ -1,7 +1,7 @@
 
 # fzf
 
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 
 ff (){ command $@           $(fzf) ; }
 fd (){ command $@ $(dirname $(fzf)); }
