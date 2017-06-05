@@ -17,7 +17,9 @@ Note: The Steam game platform refuses to run on case sensitive file systems.
 
 ### Get Git
 
-* Open terminal and type `git` to trigger xcode's git installations.
+* Open the terminal and type `xcode-select --install` to trigger the installation of scode's dev tools.
+
+This is also sometime required when upgrading OSX.
 
 ### Install these dot files:
 
