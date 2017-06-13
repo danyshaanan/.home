@@ -3,6 +3,10 @@
 [ -z "$PS1" ] && return
 
 # Notice that files are loaded by alphabetical order
-for FILE in ~/.home/bashrc/*.sh; do . $FILE; done
+for DIR in ~/.home/bashrc/*; do
+  for FILE in $DIR/*.sh; do
+    . $FILE;
+  done
+done
 
 #echo "sleep 0.1" >> ~/.bashrc
