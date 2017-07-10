@@ -138,3 +138,21 @@ tar cvfz db_file.sql.tar.bz2 db_file.temp.sql
 #clean files:
 rm -f db_file.mdb db_file.temp.*
 ```
+
+## Remove print-protection passwords from PDF files
+
+If you have a PDF file that you can view,
+but printing it is protected by a password,
+that password protection can be removed with GhostScript.
+
+'littlebirdy' is a small bash script (which is easy to review)
+that parses and runs the GhostScript command.
+
+```bash
+brew install gs
+git clone git@github.com:jakepetroules/littlebirdy.git
+./littlebirdy/littlebirdy <PDF_FILE_PATH>
+# A prompt for a password will be shown. just hit Enter
+```
+
+(reviewed and tested on commit bdf458755aa)
