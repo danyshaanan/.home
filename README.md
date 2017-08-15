@@ -38,11 +38,10 @@ bash ~/.home/bin/scripts/osx_settings.sh
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-sudo chown -R `whoami` /usr/local
 ```
 
 ```bash
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 ```
 
 ```bash
@@ -62,12 +61,11 @@ rvm install 2.2.1
 ### Main installations
 
 ```bash
-brew install gnupg2 pinentry pass
-brew install zyedidia/micro/micro
+brew install gnupg2 pinentry pass micro
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
-brew install fzf ag moreutils
+brew install fzf ag moreutils watch
 brew cask install java && brew install scala
 brew install swi-prolog
 ```
@@ -81,7 +79,7 @@ brew cask install teensy arduino # ftdi drivers also required
 
 ```bash
 npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs goatsay
-npm i -g normit pm2 grunt-cli serve fuck-you npm-check
+npm i -g normit pm2 grunt-cli serve fuck-you npm-check yarn
 ```
 
 ```bash
@@ -100,11 +98,11 @@ Run `missing-installations` to find out which of these packages are missing.
 ### More installations
 
 ```bash
-brew install bash-completion git-extras gpg pass ack
+brew install bash-completion git-extras gpg ack
 brew install mdbtools mtr ssh-copy-id sshfs vim p7zip
 brew install ddrescue duff testdisk fcrackzip links
 brew install exif exiftool imagemagick freetype jp2a mplayer sox webp
-brew install ruby ack python nginx watch
+brew install ruby ack python nginx
 brew install cdparanoia lame abcde
 brew install spark wdiff
 ```
@@ -112,8 +110,4 @@ brew install spark wdiff
 ```bash
 brew cask install chromium firefox sublime-text
 brew cask install sequel-pro sqlite-database-browser nmap
-```
-
-```bash
-npm i -g gulp karma-cli node-inspector torrent
 ```
