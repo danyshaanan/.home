@@ -14,6 +14,7 @@
 #git config --global log.follow true
 #git config --global diff.indentHeuristic true
 #git config --global gpg.program gpg
+#git config --global commit.gpgsign true
 
 [alias]
 	cp = cherry-pick
@@ -42,3 +43,5 @@
   indentHeuristic = true
 [gpg]
   program = gpg
+[commit]
+  gpgsign = true
