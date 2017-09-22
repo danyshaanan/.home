@@ -3,8 +3,7 @@
 ### Install new Node version
 
 ```bash
-nvm install 8 --reinstall-packages-from=6.9.2
-nvm alias default 8
+nvm install node --reinstall-packages-from=node
 
 # or:
 
@@ -12,4 +11,3 @@ nvm install 8
 nvm reinstall-packages 6.9.2
 nvm alias default 8
 ```
-

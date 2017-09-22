@@ -59,6 +59,7 @@ alias nounderlines='rename s/_/\./g'
 alias tolowercase='rename y/A-Z/a-z/' #renames target files to lowercase
 alias ___removebefore='rename s/.*___//g'
 alias ___removeafter='rename s/___.*\\././g'
+alias updatenode='nvm install node --reinstall-packages-from=node'
 nametab () { export PROMPT_COMMAND='echo -ne "\033]0;'$*'\007"'; } # { printf "\e]1;$*\a"; }
 lsj () { node -e 'console.log(JSON.stringify(require("fs").readdirSync("'$1'" || "."),0,2))'; }
 insert () { mkdir $1; mv $1* $1; rmdir $1; }
