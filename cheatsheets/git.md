@@ -19,6 +19,16 @@ rm -f ~/$SHA
 git log --graph --oneline --decorate
 ```
 
+### Creating a new repo out of an existing directory
+
+```bash
+git init --bare ~/newRepo.git
+git subtree push --prefix EXISTING_DIRECTORY ~/newRepo.git master
+git clone ~/newRepo.git ~/newRepo
+
+rm -rf ~/newRepo.git && cd ~/newRepo
+```
+
 ### Remove sensitive data from the whole history:
 
 https://help.github.com/articles/remove-sensitive-data/
