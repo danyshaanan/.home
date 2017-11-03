@@ -10,3 +10,8 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
 else
     eval $(gpg-agent --daemon)
 fi
+
+
+### Crypto
+
+alias sha256sum='openssl dgst -sha256'
