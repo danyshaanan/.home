@@ -71,6 +71,7 @@ brew install swi-prolog
 ```
 
 ```bash
+brew cask install xquartz && brew install wine
 brew cask install iterm2 atom osxfuse keepassx google-chrome vlc transmission
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv betterzipql
