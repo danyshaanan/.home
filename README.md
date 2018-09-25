@@ -72,7 +72,7 @@ brew install swi-prolog
 
 ```bash
 brew cask install xquartz && brew install wine
-brew cask install iterm2 atom osxfuse keepassx google-chrome vlc transmission
+brew cask install iterm2 atom osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv betterzipql
 brew cask install teensy arduino # ftdi drivers also required
