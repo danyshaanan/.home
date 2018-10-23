@@ -67,7 +67,7 @@ brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 brew install fzf ag moreutils watch fswatch
 brew cask install java && brew install scala
-brew install swi-prolog
+brew install swi-prolog r
 ```
 
 ```bash
