@@ -73,7 +73,7 @@ brew install mpv --with-bundle
 
 ```bash
 brew cask install xquartz && brew install wine
-brew cask install iterm2 atom osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
+brew cask install iterm2 firefox atom osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv
 brew cask install teensy arduino # ftdi drivers also required
@@ -110,6 +110,6 @@ brew install spark wdiff
 ```
 
 ```bash
-brew cask install chromium firefox sublime-text
+brew cask install chromium sublime-text
 brew cask install sequel-pro sqlite-database-browser nmap
 ```
