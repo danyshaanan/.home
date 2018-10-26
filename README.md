@@ -68,6 +68,7 @@ brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
 brew install fzf ag moreutils watch fswatch
 brew cask install java && brew install scala
 brew install swi-prolog r
+brew install mpv --with-bundle
 ```
 
 ```bash
