@@ -1,0 +1,14 @@
+# bundle id           UTI/ext/MIME  type role
+io.mpv                avi           all
+io.mpv                mkv           all
+io.mpv                mp4           all
+io.mpv                wmv           all
+io.mpv                mov           all
+io.mpv                webm          all
+io.mpv                flv           all
+io.mpv                mpg           all
+org.mozilla.firefox   pdf           all
+
+# bundle id   URL scheme
+org.mozilla.firefox   feed
+org.mozilla.firefox   http

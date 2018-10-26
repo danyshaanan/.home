@@ -113,3 +113,12 @@ brew install spark wdiff
 brew cask install chromium sublime-text
 brew cask install sequel-pro sqlite-database-browser nmap
 ```
+
+### duti
+
+[duti](https://github.com/moretension/duti) is a command-line tool to select default applications on OSX.
+
+Recommended setup exists in the `config.duti` and can be applied with:
+```bash
+duti ~/.home/config.duti
+```
