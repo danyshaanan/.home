@@ -66,6 +66,10 @@ insert () { mkdir $1; mv $1* $1; rmdir $1; }
 insertend () { mkdir $1; mv *$1 $1; rmdir $1; }
 insertall () { mkdir $1; mv *$1* $1; rmdir $1; }
 files () { for i in $*; do echo "`tree $i | wc -l` : $i"; done;} #count files/dirs
+setdefchmod () {
+  find . -type f -exec chmod 644 {} +
+  find . -type d -exec chmod 755 {} +
+}
 
 #bash utils:
 alias here='cd -P .'
