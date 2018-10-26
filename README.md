@@ -120,5 +120,5 @@ brew cask install sequel-pro sqlite-database-browser nmap
 
 Recommended setup exists in the `config.duti` and can be applied with:
 ```bash
-duti ~/.home/duti.conf
+duti ~/.home/conf/duti.conf
 ```
