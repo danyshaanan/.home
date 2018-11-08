@@ -73,7 +73,8 @@ brew install mpv --with-bundle
 
 ```bash
 brew cask install xquartz && brew install wine
-brew cask install iterm2 firefox atom osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
+brew cask install iterm2 firefox osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
+brew cask install brackets visual-studio-code
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv
 brew cask install teensy arduino # ftdi drivers also required
@@ -82,17 +83,6 @@ brew cask install teensy arduino # ftdi drivers also required
 ```bash
 npm i -g nsyrc tcmount dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs goatsay
 npm i -g normit pm2 grunt-cli serve fuck-you npm-check yarn
-```
-
-```bash
-apm install linter linter-eslint linter-ui-default language-arduino editorconfig language-x86asm
-apm install highlight-selected file-icons file-types react
-apm install synced-sidebar pretty-json
-apm install git-log language-scala
-
-apm install fonts
-# settings => packages => fonts => settings => font-family = FiraCode
-# cat ~/.home/conf/atom.stylesheet.ligatures.less >> ~/.atom/styles.less
 ```
 
 Run `missing-installations` to find out which of these packages are missing.
