@@ -33,7 +33,7 @@ const add = node => {
 }
 
 add(tree)
-set(tree.path)
+document.querySelector('a').click()
 
 </script>
 `
