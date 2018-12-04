@@ -28,7 +28,7 @@ const set = path => document.getElementById('grid').innerHTML = dictionary[path]
 
 const add = node => {
   dictionary[node.path] = node.children.filter(isImage).map(img).join(' ')
-  list.innerHTML += dir(node)
+  if (dictionary[node.path]) list.innerHTML += dir(node)
   node.children.filter(isDir).forEach(add)
 }
 
