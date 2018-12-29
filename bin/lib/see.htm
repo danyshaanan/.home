@@ -1,11 +1,27 @@
 <style>
+* { padding: 0; spacing: 0; }
+body { font-family: monospace; position: relative; }
 img { height: 200px; }
-body { font-family: monospace; margin-bottom: 1000px; }
-#grid { text-align: center; }
+div {
+  border:1px solid black;
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+}
+#list {
+  height: 24%;
+}
+#grid {
+  top: 25%;
+  height: 75%;
+  text-align: center;
+ }
+
+
 </style>
 <body>
-<div id=list></div><hr/>
-<div id=grid></div><hr/>
+<div id=list></div>
+<div id=grid></div>
 </body>
 
 <script>
@@ -13,8 +29,8 @@ body { font-family: monospace; margin-bottom: 1000px; }
 
 const isDir = node => node.children
 const isImage = node => !isDir(node) && /\.(jpe?g|png|gif)$/i.test(node.path)
-const dir = path => `<label><input type=radio name=d onchange=set('${path}')>${path}</label><br>`
-const img = path => `<a href='${path}'><img src='${path}'/></a>`
+const dir = path => `<label><input type=radio name=d onchange="set('${path}')">${path}</label><br>`
+const img = path => `<a href='${escape(path)}'><img src='${escape(path)}'/></a>`
 
 const dictionary = {}
 const set = path => document.body.children.grid.innerHTML = dictionary[path]
