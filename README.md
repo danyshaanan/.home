@@ -77,7 +77,7 @@ brew cask install iterm2 firefox osxfuse keepassx vlc transmission eloston-chrom
 brew cask install brackets visual-studio-code
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv
-brew cask install teensy arduino # ftdi drivers also required
+brew cask install teensy arduino homebrew/cask-drivers/ftdi-vcp-driver # requires reboot or brew cask info
 ```
 
 ```bash
