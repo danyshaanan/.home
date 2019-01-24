@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 'use strict'
 
+const commands = process.argv.slice(2)
+const quiet = ['q', 'quiet'].some(key => commands.includes(key))
+if (quiet) console.log('Running on quiet mode. Will not talk outloud.')
+
 const exec = command => require('child_process').execSync(command).toString()
 const log = text => console.log(`${new Date()}: ${text}`)
 const parsePing = output => ({
@@ -27,7 +31,9 @@ const check = _ => {
         ping = false
     }
     const state = states.find(s => s.condition(ping)).name
-    if (current !== state) exec(`say connection is ${current = state}`)
+
+    if (current !== state && !quiet) exec(`say connection is ${state}`)
+    current = state
     log(current)
     setTimeout(check, 5 * 60 * 1000)
 }
