@@ -67,18 +67,13 @@ encfs `pwd`/.encrypted `pwd`/decrypted # directories need not exist, follow inst
 umount decrypted
 ```
 
-### TrueCrypt
+### VeraCrypt
 ```bash
-brew cask install truecrypt
-truecrypt -t -c # follow instructions
-truecrypt -t -k='' --protect-hidden=no 1g.tc dir
-truecrypt -t -d dir
-```
-
-if a truecrypt volume creation fails, try to create one without a filesystem, and format it:
-```bash
-truecrypt --filesystem=none /path/to/file.tc
-mkfs.ext3 /dev/mapper/truecryptx
+brew cask install veracrypt osxfuse
+# vc is alias of '/Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt -t':
+vc -c # follow instructions
+vc -k='' --protect-hidden=no --pim=0 1g.tc dir
+vc -d dir
 ```
 
 ### Encrypt/decrypt stuff with your RSA key pair
