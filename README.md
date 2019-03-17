@@ -73,7 +73,8 @@ brew install mpv --with-bundle
 
 ```bash
 brew cask install xquartz && brew install wine
-brew cask install iterm2 firefox osxfuse keepassx vlc transmission eloston-chromium # (google-chrome)
+brew cask reinstall veracrypt osxfuse
+brew cask install iterm2 firefox keepassx vlc transmission eloston-chromium # (google-chrome)
 brew cask install brackets visual-studio-code
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv

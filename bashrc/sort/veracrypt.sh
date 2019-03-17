@@ -1,0 +1,5 @@
+alias vc='/Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt -t'
+alias vctc='vc --truecrypt'
+alias vu='vc -d'
+alias vm='vc -k="" --protect-hidden=no --pim=0'
+alias vmro='vm -m readonly'
