@@ -9,7 +9,7 @@ done
 
 
 mkdir -p ~/.config/mpv
-ln -s ~/.home/conf/mpv.input.conf ~/.config/mpv/input.coninput.conf
+ln -s ~/.home/conf/mpv.input.conf ~/.config/mpv/input.conf
 
 touch ~/.hushlogin
 bash
