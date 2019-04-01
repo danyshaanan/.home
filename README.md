@@ -109,7 +109,7 @@ brew cask install sequel-pro sqlite-database-browser nmap
 
 [duti](https://github.com/moretension/duti) is a command-line tool to select default applications on OSX.
 
-Recommended setup exists in the `config.duti` and can be applied with:
+Recommended setup exists in the `duti.conf` file and can be applied with:
 ```bash
 duti ~/.home/conf/duti.conf
 ```
