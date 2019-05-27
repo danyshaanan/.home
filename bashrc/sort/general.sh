@@ -26,6 +26,7 @@ alias ls='ls -G'
 alias top='top -o cpu'
 alias grep='grep --color'
 alias mkdir='mkdir -p'
+alias ncdu='ncdu --color=dark'
 
 #varients:
 alias ll='ls -lhF'
