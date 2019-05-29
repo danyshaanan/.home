@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-wine ~/.wine32/drive_c/Program\ Files/Guild\ Wars/Gw.exe
+wine ~/.wine/drive_c/Program\ Files/Guild\ Wars/Gw.exe
 

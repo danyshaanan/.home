@@ -72,7 +72,7 @@ brew install mpv --with-bundle
 ```
 
 ```bash
-brew cask install xquartz && brew install wine winetricks # WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg && winetricks quartz
+brew cask install xquartz && brew install wine winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
 brew cask install veracrypt osxfuse
 brew cask install iterm2 firefox keepassx vlc transmission eloston-chromium # (google-chrome)
 brew cask install brackets visual-studio-code
