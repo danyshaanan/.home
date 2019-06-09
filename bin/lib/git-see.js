@@ -12,7 +12,7 @@ const promiseExec = line => new Promise((resolve, reject) => {
 })
 
 const filePath = process.argv[2]
-const commands = ['git config --get remote.`git remote | tail -1`.url', 'git rev-parse --show-toplevel', 'git rev-parse --abbrev-ref HEAD']
+const commands = ['git config --get remote.`git remote -v | grep github | tail -1 | awk \'{print $1;}\'`.url', 'git rev-parse --show-toplevel', 'git rev-parse --abbrev-ref HEAD']
 
 Promise.all(commands.map(promiseExec))
   .then(results => {
