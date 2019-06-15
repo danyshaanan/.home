@@ -11,6 +11,7 @@ else
     eval $(gpg-agent --daemon)
 fi
 
+alias dec='gpg -dq'
 
 ### Crypto
 
