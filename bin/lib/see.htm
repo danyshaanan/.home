@@ -1,7 +1,7 @@
 <style>
 * { padding: 0; spacing: 0; }
 body { font-family: monospace; position: relative; }
-img { height: 200px; }
+img, video { height: 200px; }
 div {
   border:1px solid black;
   position: fixed;
@@ -28,15 +28,17 @@ div {
 'use strict'
 
 const isDir = node => node.children
-const isImage = node => !isDir(node) && /\.(jpe?g|png|gif)$/i.test(node.path)
+const isImage = node => !isDir(node) && /\.(jpe?g|png|gif|web[pm])$/i.test(node.path)
 const dir = path => `<label><input type=radio name=d onchange="set('${path}')">${path}</label><br>`
 const img = path => `<a href='${escape(path)}'><img src='${escape(path)}'/></a>`
+const vid = path => `<video autoplay><source src='${escape(path)}' type='video/webm'></video> `
+const tag = path => path.endsWith('webm') ? vid(path) : img(path)
 
 const dictionary = {}
 const set = path => document.body.children.grid.innerHTML = dictionary[path]
 
 const add = node => {
-  dictionary[node.path] = node.children.filter(isImage).map(n => img(n.path)).join(' ')
+  dictionary[node.path] = node.children.filter(isImage).map(n => tag(n.path)).join(' ')
   if (dictionary[node.path]) document.body.children.list.innerHTML += dir(node.path)
   node.children.filter(isDir).forEach(add)
 }
