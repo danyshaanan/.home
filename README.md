@@ -61,7 +61,7 @@ rvm install 2.2.1
 ### Main installations
 
 ```bash
-brew install gnupg2 pinentry pass micro ncdu ranger autojump
+brew install gnupg2 pinentry pass micro ncdu ranger nnn autojump
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
