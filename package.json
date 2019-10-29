@@ -4,8 +4,7 @@
   "description": "dot files",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "test": "npm run lint && configit && missing-installations",
+    "test": "configit",
     "start": "npm test"
   },
   "engines": {
