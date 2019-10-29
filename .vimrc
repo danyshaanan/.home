@@ -48,3 +48,10 @@ set shiftround
 "map <PageDown> 31j
 
 autocmd Filetype gitcommit setlocal spell
+
+" spell checking colors
+
+hi clear SpellLocal
+hi SpellLocal cterm=underline
+hi clear SpellBad
+hi SpellBad ctermbg=White ctermfg=Black
