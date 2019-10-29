@@ -4,8 +4,7 @@
   "description": "dot files",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "test": "npm run lint && configit && missing-installations",
+    "test": "configit",
     "start": "npm test"
   },
   "engines": {
@@ -14,10 +13,6 @@
   "dependencies": {},
   "devDependencies": {
     "chalk": "1.1.1",
-    "eslint": "3.0.1",
-    "eslint-config-standard": "5.3.5",
-    "eslint-plugin-promise": "1.3.2",
-    "eslint-plugin-standard": "2.0.0",
     "ini": "1.3.4",
     "tape": "4.0.0"
   },
