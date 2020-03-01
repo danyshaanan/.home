@@ -64,7 +64,7 @@ rvm install 2.2.1
 brew install gnupg2 pinentry pass micro ncdu ranger nnn autojump
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
 brew install cowsay figlet tree rename trash wget curl source-highlight
-brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aacc
+brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
 brew cask install java && brew install scala
 brew install swi-prolog r golang
@@ -74,7 +74,7 @@ brew install mpv --with-bundle
 ```bash
 brew cask install xquartz && brew install wine winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
 brew cask install veracrypt osxfuse
-brew cask install iterm2 firefox keepassx vlc transmission eloston-chromium # (google-chrome)
+brew cask install iterm2 firefox vlc transmission
 brew cask install brackets visual-studio-code
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv
@@ -85,8 +85,6 @@ brew cask install teensy arduino homebrew/cask-drivers/ftdi-vcp-driver # require
 npm i -g nsyrc dupes cli-mandelbrot geoexif osx-wifi-cli imagesnapjs goatsay
 npm i -g normit pm2 grunt-cli serve fuck-you npm-check yarn
 ```
-
-Run `missing-installations` to find out which of these packages are missing.
 
 ### More installations
 
