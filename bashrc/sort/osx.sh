@@ -6,6 +6,8 @@ if which brew >/dev/null; then
 	[ -f "$BASHCOMP" ] && . "$BASHCOMP"
 fi
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 export NODE_HOME='/usr/local/bin'
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:$PATH
