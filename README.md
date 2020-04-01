@@ -103,6 +103,10 @@ brew cask install chromium sublime-text
 brew cask install sequel-pro sqlite-database-browser nmap
 ```
 
+```bash
+python3 -m pip install jupyterlab
+```
+
 ### duti
 
 [duti](https://github.com/moretension/duti) is a command-line tool to select default applications on OSX.
