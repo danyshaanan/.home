@@ -17,15 +17,14 @@ Note: The Steam game platform refuses to run on case sensitive file systems.
 
 ### Get Git
 
-* Open the terminal and type `xcode-select --install` to trigger the installation of xcode's dev tools.
-
-This is also sometime required when upgrading OSX.
+* Open the terminal and type `git` to trigger the installation of xcode's dev tools.
 
 ### Install these dot files:
 
 ```bash
 git clone https://github.com/danyshaanan/.home.git ~/.home
 bash ~/.home/init.sh
+chsh -s /bin/bash
 ```
 
 ### Run the OSX init setup script:
@@ -38,10 +37,6 @@ bash ~/.home/bin/scripts/osx_settings.sh
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```bash
-brew tap caskroom/cask
 ```
 
 ```bash
