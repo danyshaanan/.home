@@ -57,7 +57,7 @@ rvm install 2.2.1
 
 ```bash
 brew install gnupg2 pinentry pass micro ncdu ranger nnn autojump openfortivpn
-brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop
+brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop gs pdfcrack
 brew install cowsay figlet tree rename trash wget curl source-highlight
 brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
