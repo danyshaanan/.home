@@ -1,6 +1,8 @@
 
 [ `uname` == 'Darwin' ] || return
 
+export LC_ALL=en_US.UTF-8
+
 if which brew >/dev/null; then
 	BASHCOMP="`brew --prefix`/etc/bash_completion"
 	[ -f "$BASHCOMP" ] && . "$BASHCOMP"
