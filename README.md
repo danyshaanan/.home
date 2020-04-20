@@ -63,13 +63,12 @@ brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
 brew cask install java && brew install scala
 brew install swi-prolog r golang
-brew install mpv --with-bundle
 ```
 
 ```bash
 brew cask install xquartz && brew install wine winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
 brew cask install veracrypt osxfuse
-brew cask install iterm2 firefox vlc transmission
+brew cask install iterm2 firefox mpv vlc transmission
 brew cask install brackets visual-studio-code
 brew cask install qlcolorcode qlmarkdown
 brew cask install quicklook-json qlprettypatch quicklook-csv
