@@ -66,7 +66,7 @@ brew install swi-prolog r golang
 ```
 
 ```bash
-brew cask install xquartz && brew install wine winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
+brew cask install xquartz wine-stable && brew install winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
 brew cask install veracrypt osxfuse
 brew cask install iterm2 firefox mpv vlc transmission
 brew cask install brackets visual-studio-code
