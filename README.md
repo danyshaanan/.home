@@ -109,3 +109,10 @@ Recommended setup exists in the `duti.conf` file and can be applied with:
 ```bash
 duti ~/.home/conf/duti.conf
 ```
+
+### cron
+Activate the `.home/cron` file:
+```bash
+crontab ~/.home/cron
+```
+

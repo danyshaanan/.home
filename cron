@@ -1,0 +1,1 @@
+*/5 * * * * /usr/local/bin/rename s/\ /./g ~/Desktop/Screen* && mv ~/Desktop/Screen.Shot* ~/Desktop/Screen.Shot/
