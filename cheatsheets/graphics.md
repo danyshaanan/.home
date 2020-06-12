@@ -74,3 +74,12 @@ convert anim_with_reverse.gif -shave 0x66 anim_with_reverse_cropped.gif
 # or crop height to 410 starting at 66
 convert anim_with_reverse.gif -crop x410+0+66 +repage anim_with_reverse_cropped.gif
 ```
+
+### youtube video to patrol cycle gif:
+```bash
+youtube-dl https://www.youtube.com/watch?v=yYM2yRHiMAY
+ffmpeg -i *yYM2yRHiMAY*.mp4 -vf fps=1 frames%04d.png
+mogrify -resize 50% frames*.png
+convert -delay 10 -loop 0 frames* temp.gif
+convert temp.gif -coalesce -duplicate 1,-2-1 -quiet -layers OptimizePlus -loop 0 patrol_cycle.gif
+```
