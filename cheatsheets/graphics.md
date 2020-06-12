@@ -17,6 +17,8 @@ convert c2x*.jpg +append l2.jpg	#horizontally
 convert l*.jpg   -append e.jpg	#vertically
 #create animated gif:
 convert -delay 33 -loop 0 source_*.jpg result.gif #keep source files numbers consecutive
+#patrol cycle gif:
+convert result.gif -coalesce -duplicate 1,-2-1 -quiet -layers OptimizePlus -loop 0 patrol_cycle.gif
 ```
 
 ### Find and convert bmp files
