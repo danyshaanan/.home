@@ -116,3 +116,8 @@ Activate the `.home/cron` file:
 crontab ~/.home/cron
 ```
 
+### Firefox config
+After installing Firefox (`brew cask install firefox`), or after creating a new Firefox profile, run:
+```bash
+for d in ~/Library/Application\ Support/Firefox/Profiles/*; do ln -s ~/.home/conf/firefox.js "$d/user.js"; done
+```
