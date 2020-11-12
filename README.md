@@ -56,9 +56,9 @@ rvm install 2.2.1
 ### Main installations
 
 ```bash
-brew install gnupg2 pinentry pass micro ncdu ranger nnn autojump openfortivpn
+brew install gnupg2 pinentry pass micro ncdu ranger nnn autojump openfortivpn nmap
 brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop gs pdfcrack
-brew install cowsay figlet tree rename trash wget curl source-highlight
+brew install cowsay figlet tree rename trash wget curl source-highlight telnet
 brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
 brew cask install java && brew install scala
