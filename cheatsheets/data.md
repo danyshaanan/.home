@@ -40,7 +40,8 @@ Mainly from FAT.* or NTFS file systems.
 brew install ddrescue testdisk #OSX
 
 # copy the drive to an image with ddrescue:
-sudo dd_rescue /dev/hdc hdimage
+# unmount volume and:
+sudo ddrescue /dev/hdc hdimage
 
 #testdisk:
 sudo photorec hdimage
