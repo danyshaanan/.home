@@ -63,6 +63,7 @@ brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
 brew cask install java && brew install scala
 brew install swi-prolog r golang
+brew install nload md5sha1sum
 ```
 
 ```bash
