@@ -61,7 +61,7 @@ brew install git tig unrar imagemagick mpg123 youtube-dl slurm htop gs pdfcrack
 brew install cowsay figlet tree rename trash wget curl source-highlight telnet
 brew install ffmpeg
 brew install fzf ag moreutils watch fswatch duti
-brew cask install java && brew install scala
+brew cask install java && brew install scala ocaml
 brew install swi-prolog r golang
 brew install nload md5sha1sum
 ```
