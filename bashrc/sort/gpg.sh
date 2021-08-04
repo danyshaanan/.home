@@ -11,6 +11,8 @@ else
     eval $(gpg-agent --daemon)
 fi
 
+# restart with gpgconf --kill all
+
 alias dec='gpg -dq'
 
 ### Crypto
