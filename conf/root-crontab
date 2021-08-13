@@ -1,0 +1,1 @@
+* * * * * powermetrics --samplers smc -n 1 |grep -i "CPU die temperature" | grep -o "\d\+\.\d\+" >> /tmp/.tempc

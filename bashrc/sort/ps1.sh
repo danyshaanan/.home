@@ -11,7 +11,6 @@ cat /tmp/.tempc  > /dev/null 2> /dev/null && PS1TEMPC='[$(cat /tmp/.tempc | egre
 
 PS1="\t $PS1TEMPC$PS1GITPROMPT \w> "
 
-
-# Add to root crontab:
-# * * * * * powermetrics --samplers smc -n 1 |grep -i "CPU die temperature" | grep -o "\d\+\.\d\+" >> /tmp/.tempc
+# To enable die temp in PS1, run:
+# sudo crontab ~/.home/conf/root-crontab
 
