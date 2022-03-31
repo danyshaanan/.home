@@ -14,3 +14,5 @@ PS1="\t $PS1TEMPC$PS1GITPROMPT \w> "
 # To enable die temp in PS1, run:
 # sudo crontab ~/.home/conf/root-crontab
 
+alias ps0='PS1="> " && c'
+
