@@ -35,6 +35,7 @@ alias la='ll -A'
 alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ls1='/bin/ls -1'
 alias ..='cd .. && ll'
+alias cdl='cd `ls -1dt ./*/ | head -n 1`'
 alias x='exit'
 alias c='clear'
 
