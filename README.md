@@ -69,8 +69,7 @@ brew install nload md5sha1sum
 ```bash
 brew install xquartz wine-stable && brew install winetricks # WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot && winetricks quartz
 brew install veracrypt osxfuse
-brew install iterm2 firefox mpv vlc transmission
-brew install brackets visual-studio-code
+brew install iterm2 firefox textmate mpv vlc transmission
 brew install qlcolorcode qlmarkdown
 brew install quicklook-json qlprettypatch quicklook-csv
 brew install teensy arduino homebrew/cask-drivers/ftdi-vcp-driver # requires reboot or brew cask info
